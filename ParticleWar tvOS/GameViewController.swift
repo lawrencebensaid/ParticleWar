@@ -1,6 +1,6 @@
 //
 //  GameViewController.swift
-//  DotWars tvOS
+//  ParticleWar tvOS
 //
 //  Created by Lawrence Bensaid on 2/8/22.
 //

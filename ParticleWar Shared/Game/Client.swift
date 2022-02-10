@@ -1,11 +1,10 @@
 //
 //  Client.swift
-//  DotWars
+//  ParticleWar
 //
 //  Created by Lawrence Bensaid on 2/8/22.
 //
 
-import UIKit
 import SpriteKit
 
 class Client: Hashable {
@@ -40,7 +39,9 @@ class Client: Hashable {
         selected = territory
         if team == Game.main.player?.team {
             context?.highlight(territory, by: self)
+#if os(iOS)
             UISelectionFeedbackGenerator().selectionChanged()
+#endif
         }
     }
     
@@ -51,7 +52,9 @@ class Client: Hashable {
         self.selected = nil
         if team == Game.main.player?.team {
             context?.resetHighlight(self)
+#if os(iOS)
             UISelectionFeedbackGenerator().selectionChanged()
+#endif
         }
     }
     
@@ -74,9 +77,12 @@ class Client: Hashable {
     }
     
     public func drag(from origin: CGPoint, to target: CGPoint) {
-        guard let originTerritory = context?.nodes(at: origin).first else { return }
-        guard let targetTerritory = context?.nodes(at: target).first else { return }
-        print("DRAG from '\(originTerritory.name ?? "")' to '\(targetTerritory.name ?? "")'")
+        guard let originTerritory = context?.nodes(at: origin).compactMap({ context?.territories[$0] }).first else { return }
+        guard let targetTerritory = context?.nodes(at: target).compactMap({ context?.territories[$0] }).first else { return }
+        print("DRAG from '\(originTerritory.name)' to '\(targetTerritory.name)'")
+        if originTerritory.team == team && targetTerritory.team == team {
+            originTerritory.supply(to: targetTerritory)
+        }
     }
     
 }

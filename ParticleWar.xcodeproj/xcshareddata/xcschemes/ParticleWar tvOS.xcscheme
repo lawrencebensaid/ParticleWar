@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4D4F07AE27B2C02E00DBD370"
-               BuildableName = "DotWars.app"
+               BuildableName = "ParticleWar.app"
                BlueprintName = "ParticleWar tvOS"
                ReferencedContainer = "container:ParticleWar.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D4F07AE27B2C02E00DBD370"
-            BuildableName = "DotWars.app"
+            BuildableName = "ParticleWar.app"
             BlueprintName = "ParticleWar tvOS"
             ReferencedContainer = "container:ParticleWar.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D4F07AE27B2C02E00DBD370"
-            BuildableName = "DotWars.app"
+            BuildableName = "ParticleWar.app"
             BlueprintName = "ParticleWar tvOS"
             ReferencedContainer = "container:ParticleWar.xcodeproj">
          </BuildableReference>

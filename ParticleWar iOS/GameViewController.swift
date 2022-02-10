@@ -1,6 +1,6 @@
 //
 //  GameViewController.swift
-//  DotWars iOS
+//  ParticleWar iOS
 //
 //  Created by Lawrence Bensaid on 2/8/22.
 //

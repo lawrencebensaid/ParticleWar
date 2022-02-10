@@ -1,6 +1,6 @@
 //
 //  RangeIndicator.swift
-//  DotWars
+//  ParticleWar
 //
 //  Created by Lawrence Bensaid on 2/9/22.
 //
@@ -24,7 +24,7 @@ class RangeIndicator: SKShapeNode {
         lineWidth = 2
     }
     
-    public func color(_ value: UIColor) {
+    public func color(_ value: SKColor) {
         fillColor = value.withAlphaComponent(0.1)
         strokeColor = value.withAlphaComponent(0.7)
     }

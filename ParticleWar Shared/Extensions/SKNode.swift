@@ -1,6 +1,6 @@
 //
 //  SKNode.swift
-//  DotWars
+//  ParticleWar
 //
 //  Created by Lawrence Bensaid on 2/9/22.
 //

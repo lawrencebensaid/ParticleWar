@@ -1,6 +1,6 @@
 //
 //  Team.swift
-//  DotWars iOS
+//  ParticleWar iOS
 //
 //  Created by Lawrence Bensaid on 2/8/22.
 //
@@ -20,9 +20,9 @@ class Team: Equatable {
     public static let all: [Team] = [.red, .yellow, .green, .blue]
     
     public let name: String
-    public let color: UIColor
+    public let color: SKColor
     
-    private init(_ name: String, color: UIColor) {
+    private init(_ name: String, color: SKColor) {
         self.name = name
         self.color = color
     }

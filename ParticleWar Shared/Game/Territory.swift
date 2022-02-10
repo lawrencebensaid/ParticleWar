@@ -1,6 +1,6 @@
 //
 //  Territory.swift
-//  DotWars iOS
+//  ParticleWar iOS
 //
 //  Created by Lawrence Bensaid on 2/8/22.
 //
@@ -28,12 +28,12 @@ class Territory: Hashable {
     public let productionSpeed = 0.01
     public let range: Double = 200
     
-    internal var context: GameScene?
+    internal var context: GameScene
     private let label = SKLabelNode(text: "")
     
     // Proxy
-    public let node: SKShapeNode
-    public var name: String {
+    public let node = SKShapeNode()
+    public internal(set) var name: String {
         get { node.name ?? "\(team?.name ?? "unnamed") Territory" }
         set { node.name = newValue }
     }
@@ -58,11 +58,9 @@ class Territory: Hashable {
         set { node.strokeColor = newValue }
     }
     
-    init(team: Team? = nil, position: CGPoint? = nil, context: GameScene) {
+    init(team: Team? = nil, context: GameScene) {
         self.team = team
         self.context = context
-        node = SKShapeNode()
-        node.position = position ?? .zero
         color = team?.color.withAlphaComponent(0.8)
         
         node.path = CGPath(roundedRect: CGRect(x: -25, y: -25, width: 50, height: 50), cornerWidth: 25, cornerHeight: 25, transform: nil)
@@ -78,11 +76,15 @@ class Territory: Hashable {
     private func attack(_ territory: Territory) {
         guard attacking else { return }
         guard armies > 0 else { attacking = false; return }
-        context?.deployArmy(from: self, to: territory)
+        context.deployArmy(from: self, to: territory)
         armies -= 1
         DispatchQueue.main.asyncAfter(deadline: .now() + deploymentSpeed) {
             self.attack(territory)
         }
+    }
+    
+    public func supply(to territory: Territory) {
+        context.deployHighway(from: self, to: territory)
     }
     
     public func distance(to land: Territory) -> Double {
@@ -115,18 +117,22 @@ class Territory: Hashable {
         if team == army.team {
             armies += 1
             if team == Game.main.player?.team {
+#if os(iOS)
                 UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+#endif
             }
         } else {
             armies -= 1
             if team == Game.main.player?.team {
+#if os(iOS)
                 UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+#endif
             }
             if armies <= 0 {
                 set(team: army.team)
             }
         }
-        army.removeFromParent()
+        army.die()
     }
     
     public func launchAttack(on territory: Territory) {

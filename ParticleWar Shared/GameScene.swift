@@ -1,6 +1,6 @@
 //
 //  GameScene.swift
-//  DotWars Shared
+//  ParticleWar Shared
 //
 //  Created by Lawrence Bensaid on 2/8/22.
 //
@@ -13,6 +13,10 @@ class GameScene: SKScene {
     private var targetTouch: CGPoint?
     private let dragLine = SKShapeNode()
     private var rangeIndicators: [Client: RangeIndicator] = [:]
+//    private var supplylines: [Client: [SupplyLine]] = [:]
+    
+    public var territories: [SKNode: Territory] = [:]
+    public var armies: [SKNode: Army] = [:]
     
     class func newGameScene() -> GameScene {
         guard let scene = SKScene(fileNamed: "GameScene") as? GameScene else {
@@ -45,8 +49,21 @@ class GameScene: SKScene {
     }
     
     public func deployArmy(from origin: Territory, to target: Territory) {
-        let army = Army(origin: origin, target: target)
-        addChild(army)
+        let army = Army(team: origin.team, target: target, context: self)
+        army.position = origin.position
+        armies[army.node] = army
+        super.addChild(army.node)
+    }
+    
+    public func deployHighway(from origin: Territory, to target: Territory) {
+        let highway = Highway(origin: origin, target: target)
+        super.addChild(highway.node)
+    }
+    
+    private func add(_ territory: Territory, at position: CGPoint) {
+        territory.position = position
+        territories[territory.node] = territory
+        super.addChild(territory.node)
     }
     
     private func setUpScene() {
@@ -60,43 +77,35 @@ class GameScene: SKScene {
         Game.main.add(bot: Bot(client: Client(.green, showActions: true)))
         
         // HUD
-        dragLine.strokeColor = .white
         dragLine.lineWidth = 8
         addChild(dragLine)
         
         // Center
-        addChild(Territory(position: .init(x: 0, y: 150), context: self))
-        addChild(Territory(position: .init(x: 0, y: 0), context: self))
-        addChild(Territory(position: .init(x: 0, y: -150), context: self))
+        add(Territory(context: self), at: .init(x: 0, y: 150))
+        add(Territory(context: self), at: .init(x: 0, y: 0))
+        add(Territory(context: self), at: .init(x: 0, y: -150))
         
         // Right
-        addChild(Territory(position: .init(x: 150, y: 75), context: self))
-        addChild(Territory(position: .init(x: 150, y: -75), context: self))
-        addChild(Territory(position: .init(x: 250, y: 50), context: self))
-        addChild(Territory(position: .init(x: 250, y: -50), context: self))
-        addChild(Territory(position: .init(x: 250, y: 150), context: self))
-        addChild(Territory(position: .init(x: 250, y: -150), context: self))
+        add(Territory(context: self), at: .init(x: 150, y: 75))
+        add(Territory(context: self), at: .init(x: 150, y: -75))
+        add(Territory(context: self), at: .init(x: 250, y: 50))
+        add(Territory(context: self), at: .init(x: 250, y: -50))
+        add(Territory(context: self), at: .init(x: 250, y: 150))
+        add(Territory(context: self), at: .init(x: 250, y: -150))
         
         // Left
-        addChild(Territory(position: .init(x: -150, y: 75), context: self))
-        addChild(Territory(position: .init(x: -150, y: -75), context: self))
-        addChild(Territory(position: .init(x: -250, y: 50), context: self))
-        addChild(Territory(position: .init(x: -250, y: -50), context: self))
-        addChild(Territory(position: .init(x: -250, y: 150), context: self))
-        addChild(Territory(position: .init(x: -250, y: -150), context: self))
+        add(Territory(context: self), at: .init(x: -150, y: 75))
+        add(Territory(context: self), at: .init(x: -150, y: -75))
+        add(Territory(context: self), at: .init(x: -250, y: 50))
+        add(Territory(context: self), at: .init(x: -250, y: -50))
+        add(Territory(context: self), at: .init(x: -250, y: 150))
+        add(Territory(context: self), at: .init(x: -250, y: -150))
         
         // Corners
-        addChild(HomeTerritory(team: .blue, position: .init(x: 400, y: 100), context: self))
-        addChild(HomeTerritory(team: .green, position: .init(x: 400, y: -100), context: self))
-        addChild(HomeTerritory(team: .red, position: .init(x: -400, y: 100), context: self))
-        addChild(HomeTerritory(team: .yellow, position: .init(x: -400, y: -100), context: self))
-    }
-    
-    public private(set) var territories: [SKNode: Territory] = [:]
-    
-    func addChild(_ territory: Territory) {
-        territories[territory.node] = territory
-        super.addChild(territory.node)
+        add(HomeTerritory(team: .blue, context: self), at: .init(x: 400, y: 100))
+        add(HomeTerritory(team: .green, context: self), at: .init(x: 400, y: -100))
+        add(HomeTerritory(team: .red, context: self), at: .init(x: -400, y: 100))
+        add(HomeTerritory(team: .yellow, context: self), at: .init(x: -400, y: -100))
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -109,16 +118,15 @@ class GameScene: SKScene {
             if let tower = territories[node] {
                 tower.update()
             }
-            if let army = node as? Army {
-                guard let origin = army.origin else { continue }
+            if let army = armies[node] {
                 guard let target = army.target else { continue }
-                if army.intersects(target.node) {
+                if army.node.intersects(target.node) {
                     target.receive(army)
                     continue
                 }
                 let speed: CGFloat = 1
-                let x = target.position.x - origin.position.x
-                let y = target.position.y - origin.position.y
+                let x = target.position.x - army.position.x
+                let y = target.position.y - army.position.y
                 let angle = atan2(y, x)
                 let vx = cos(angle) * speed
                 let vy = sin(angle) * speed
@@ -150,6 +158,7 @@ extension GameScene {
                 if let tower = territories[node] {
                     targetTouch = nil
                     sourceTouch = tower.position
+                    dragLine.strokeColor = tower.color!
                 }
             }
         }
@@ -170,7 +179,6 @@ extension GameScene {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        targetTouch = nil
         for t in touches {
             let nodes = nodes(at: t.location(in: self))
             let territories = nodes.compactMap({ self.territories[$0] })
@@ -179,7 +187,7 @@ extension GameScene {
                 break
             }
             for territory in territories {
-                if let sourceTouch = sourceTouch, targetTouch != nil {
+                if let sourceTouch = sourceTouch, sourceTouch != targetTouch {
                     Game.main.player?.drag(from: sourceTouch, to: territory.position)
                     break
                 } else {
@@ -188,6 +196,7 @@ extension GameScene {
                 }
             }
         }
+        targetTouch = nil
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -202,18 +211,45 @@ extension GameScene {
 extension GameScene {
     
     override func mouseDown(with event: NSEvent) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+        let nodes = nodes(at: event.location(in: self))
+        for node in nodes {
+            if let tower = territories[node] {
+                targetTouch = nil
+                sourceTouch = tower.position
+                dragLine.strokeColor = tower.color!
+            }
         }
-        addChild(Army(position: t.location(in: self), color: .green))
     }
     
     override func mouseDragged(with event: NSEvent) {
-        addChild(Army(position: t.location(in: self), color: .blue))
+        var point = event.location(in: self)
+        let nodes = nodes(at: point)
+        for node in nodes {
+            if let tower = territories[node] {
+                point = tower.position
+                break
+            }
+        }
+        targetTouch = point
     }
     
     override func mouseUp(with event: NSEvent) {
-        addChild(Army(position: t.location(in: self), color: .red))
+        let nodes = nodes(at: event.location(in: self))
+        let territories = nodes.compactMap({ self.territories[$0] })
+        if let node = nodes.first, territories.count == 0 {
+            Game.main.player?.tap(node.position)
+            return
+        }
+        for territory in territories {
+            if let sourceTouch = sourceTouch, sourceTouch != targetTouch {
+                Game.main.player?.drag(from: sourceTouch, to: territory.position)
+                return
+            } else {
+                Game.main.player?.tap(territory.position)
+                return
+            }
+        }
+        targetTouch = nil
     }
     
 }

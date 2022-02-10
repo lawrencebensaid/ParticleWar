@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  DotWars macOS
+//  ParticleWar macOS
 //
 //  Created by Lawrence Bensaid on 2/8/22.
 //

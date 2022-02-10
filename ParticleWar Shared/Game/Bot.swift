@@ -1,6 +1,6 @@
 //
 //  Bot.swift
-//  DotWars
+//  ParticleWar
 //
 //  Created by Lawrence Bensaid on 2/8/22.
 //
