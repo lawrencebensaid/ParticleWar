@@ -7,24 +7,59 @@
 
 import SpriteKit
 
-class Team: Equatable {
+class Team: Codable {
+    
+    // Characteristics
+    public let name: String
+    public let color: SKColor
+    
+    // Statistics
+    public var score: Int {
+        var score: Int = 0
+        for (_, value) in context?.territories ?? [:] {
+            score += value.armies
+        }
+        return score
+    }
+    
+    // Context
+    internal var context: GameScene?
+    
+    private enum CodingKeys: CodingKey {
+        case name
+        case color
+    }
+    
+    init(_ name: String, color: SKColor, context: GameScene? = nil) {
+        self.name = name
+        self.color = color
+        self.context = context
+    }
+    
+    public required convenience init(from decoder: Decoder) throws {
+        let context = decoder.userInfo[.context] as? GameScene
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let name = try container.decode(String.self, forKey: .name)
+        let hex = try container.decode(String.self, forKey: .color)
+        self.init(name, color: SKColor(hex: hex), context: context)
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(name, forKey: .name)
+        try container.encode(color.hex, forKey: .color)
+    }
+    
+}
+
+extension Team: Hashable {
     
     public static func == (lhs: Team, rhs: Team) -> Bool {
         lhs.name == rhs.name
     }
     
-    public static let red = Team("Red", color: .red)
-    public static let blue = Team("Blue", color: .blue)
-    public static let green = Team("Green", color: .green)
-    public static let yellow = Team("Yellow", color: .yellow)
-    public static let all: [Team] = [.red, .yellow, .green, .blue]
-    
-    public let name: String
-    public let color: SKColor
-    
-    private init(_ name: String, color: SKColor) {
-        self.name = name
-        self.color = color
+    public func hash(into hasher: inout Hasher) {
+        
     }
     
 }

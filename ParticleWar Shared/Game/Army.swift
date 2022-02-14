@@ -21,8 +21,12 @@ class Army: Entity {
         name = "\(team?.name ?? "unnamed") Army"
     }
     
+    public required convenience init(from decoder: Decoder) throws {
+        fatalError("init(from:) has not been implemented")
+    }
+    
     public func die() {
-        context.armies.removeValue(forKey: node)
+        context?.armies.removeValue(forKey: node)
         node.removeFromParent()
     }
     

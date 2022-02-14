@@ -1,0 +1,108 @@
+{
+    "bots": [
+        {
+            "name": "Hard Bot",
+            "team": "Red",
+            "difficulty": "hard"
+        },
+        {
+            "name": "Normal Bot",
+            "team": "Yellow",
+            "difficulty": "normal"
+        },
+        {
+            "name": "Easy Bot",
+            "team": "Green",
+            "difficulty": "easy"
+        }
+    ],
+    "teams": [
+        {
+            "name": "Red",
+            "color": "FF0000"
+        },
+        {
+            "name": "Blue",
+            "color": "0000FF"
+        },
+        {
+            "name": "Green",
+            "color": "00FF00"
+        },
+        {
+            "name": "Yellow",
+            "color": "FFFF00"
+        }
+    ],
+    "entities": [],
+    "structures": [
+        {
+            "position": [0, 150]
+        },
+        {
+            "position": [0, 0]
+        },
+        {
+            "position": [0, -150]
+        },
+        
+        {
+            "position": [150, 75]
+        },
+        {
+            "position": [150, -75]
+        },
+        {
+            "position": [250, 50]
+        },
+        {
+            "position": [250, -50]
+        },
+        {
+            "position": [250, 150]
+        },
+        {
+            "position": [250, -150]
+        },
+        
+        {
+            "position": [-150, 75]
+        },
+        {
+            "position": [-150, -75]
+        },
+        {
+            "position": [-250, 50]
+        },
+        {
+            "position": [-250, -50]
+        },
+        {
+            "position": [-250, 150]
+        },
+        {
+            "position": [-250, -150]
+        },
+        
+        {
+            "position": [400, 100],
+            "armies": 20,
+            "team": "Blue"
+        },
+        {
+            "position": [400, -100],
+            "armies": 20,
+            "team": "Green"
+        },
+        {
+            "position": [-400, 100],
+            "armies": 20,
+            "team": "Red"
+        },
+        {
+            "position": [-400, -100],
+            "armies": 20,
+            "team": "Yellow"
+        }
+    ]
+}

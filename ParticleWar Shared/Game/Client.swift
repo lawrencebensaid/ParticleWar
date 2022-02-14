@@ -22,8 +22,16 @@ class Client: Hashable {
     public let team: Team
     public let showActions: Bool
     
-    // State
+    // Statistics
+    private var nodes: [SKNode] { context?.children ?? [] }
+    public var territories: [Territory] { nodes.compactMap({ context?.territories[$0] }) }
+    public var ownTerritories: [Territory] { territories.filter { $0.team == team } }
+    public var otherTerritories: [Territory] { territories.filter { $0.team != team } }
+    
+    // Context
     public private(set) var context: GameScene?
+    
+    // State
     public var selected: Territory?
     
     init(_ team: Team, showActions: Bool = false) {
@@ -37,7 +45,7 @@ class Client: Hashable {
             territory.strokeColor = team.color
         }
         selected = territory
-        if team == Game.main.player?.team {
+        if team == context?.level?.player?.team {
             context?.highlight(territory, by: self)
 #if os(iOS)
             UISelectionFeedbackGenerator().selectionChanged()
@@ -50,7 +58,7 @@ class Client: Hashable {
             selected?.lineWidth = 0
         }
         self.selected = nil
-        if team == Game.main.player?.team {
+        if team == context?.level?.player?.team {
             context?.resetHighlight(self)
 #if os(iOS)
             UISelectionFeedbackGenerator().selectionChanged()

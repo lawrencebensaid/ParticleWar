@@ -18,6 +18,8 @@ class GameScene: SKScene {
     public var territories: [SKNode: Territory] = [:]
     public var armies: [SKNode: Army] = [:]
     
+    public var level: Level?
+    
     class func newGameScene() -> GameScene {
         guard let scene = SKScene(fileNamed: "GameScene") as? GameScene else {
             print("Failed to load GameScene.sks")
@@ -60,57 +62,57 @@ class GameScene: SKScene {
         super.addChild(highway.node)
     }
     
-    private func add(_ territory: Territory, at position: CGPoint) {
-        territory.position = position
+    private func add(_ territory: Territory, at position: CGPoint? = nil) {
+        if let position = position {
+            territory.position = position
+        }
         territories[territory.node] = territory
         super.addChild(territory.node)
+    }
+    
+    private func getLevel() {
+        
+        if let path = Bundle.main.path(forResource: "level", ofType: "json") {
+            guard let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe) else { return }
+            let decoder = JSONDecoder()
+            decoder.userInfo = [.context: self]
+            guard let level = try? decoder.decode(Level.self, from: data) else { return }
+            self.level = level
+        }
+        
     }
     
     private func setUpScene() {
         let label = self.childNode(withName: "//helloLabel") as? SKLabelNode
         label?.removeFromParent()
         
-        Game.main.register(self)
-        Game.main.set(player: Client(.blue, showActions: true))
-        Game.main.add(bot: Bot(client: Client(.red, showActions: true)))
-        Game.main.add(bot: Bot(client: Client(.yellow, showActions: true)))
-        Game.main.add(bot: Bot(client: Client(.green, showActions: true)))
+        getLevel()
+        
+        guard let level = level else { return }
+        level.register(self)
+        level.set(player: Client(level.getTeamBy(name: "Blue")!, showActions: true))
+        level.add(bot: Bot(client: Client(level.getTeamBy(name: "Red")!, showActions: true)))
+        level.add(bot: Bot(client: Client(level.getTeamBy(name: "Yellow")!, showActions: true)))
+        level.add(bot: Bot(client: Client(level.getTeamBy(name: "Green")!, showActions: true)))
+        
+        for team in level.teams {
+            let label = SKLabelNode(text: "\(team.name)")
+            label.position = .init(x: -frame.width / 2 - 100, y: -frame.height / 2 - 100)
+            addChild(label)
+        }
+        
+        for structure in level.structures {
+            add(structure)
+        }
         
         // HUD
         dragLine.lineWidth = 8
         addChild(dragLine)
-        
-        // Center
-        add(Territory(context: self), at: .init(x: 0, y: 150))
-        add(Territory(context: self), at: .init(x: 0, y: 0))
-        add(Territory(context: self), at: .init(x: 0, y: -150))
-        
-        // Right
-        add(Territory(context: self), at: .init(x: 150, y: 75))
-        add(Territory(context: self), at: .init(x: 150, y: -75))
-        add(Territory(context: self), at: .init(x: 250, y: 50))
-        add(Territory(context: self), at: .init(x: 250, y: -50))
-        add(Territory(context: self), at: .init(x: 250, y: 150))
-        add(Territory(context: self), at: .init(x: 250, y: -150))
-        
-        // Left
-        add(Territory(context: self), at: .init(x: -150, y: 75))
-        add(Territory(context: self), at: .init(x: -150, y: -75))
-        add(Territory(context: self), at: .init(x: -250, y: 50))
-        add(Territory(context: self), at: .init(x: -250, y: -50))
-        add(Territory(context: self), at: .init(x: -250, y: 150))
-        add(Territory(context: self), at: .init(x: -250, y: -150))
-        
-        // Corners
-        add(HomeTerritory(team: .blue, context: self), at: .init(x: 400, y: 100))
-        add(HomeTerritory(team: .green, context: self), at: .init(x: 400, y: -100))
-        add(HomeTerritory(team: .red, context: self), at: .init(x: -400, y: 100))
-        add(HomeTerritory(team: .yellow, context: self), at: .init(x: -400, y: -100))
     }
     
     override func update(_ currentTime: TimeInterval) {
 
-        for bot in Game.main.bots {
+        for bot in level?.bots ?? [] {
             bot.update()
         }
         
@@ -183,15 +185,15 @@ extension GameScene {
             let nodes = nodes(at: t.location(in: self))
             let territories = nodes.compactMap({ self.territories[$0] })
             if let node = nodes.first, territories.count == 0 {
-                Game.main.player?.tap(node.position)
+                level?.player?.tap(node.position)
                 break
             }
             for territory in territories {
                 if let sourceTouch = sourceTouch, sourceTouch != targetTouch {
-                    Game.main.player?.drag(from: sourceTouch, to: territory.position)
+                    level?.player?.drag(from: sourceTouch, to: territory.position)
                     break
                 } else {
-                    Game.main.player?.tap(territory.position)
+                    level?.player?.tap(territory.position)
                     break
                 }
             }
@@ -236,17 +238,18 @@ extension GameScene {
     override func mouseUp(with event: NSEvent) {
         let nodes = nodes(at: event.location(in: self))
         let territories = nodes.compactMap({ self.territories[$0] })
+        print("\(territories.count)/\(nodes.count)")
         if let node = nodes.first, territories.count == 0 {
-            Game.main.player?.tap(node.position)
+            level?.player?.tap(node.position)
             return
         }
         for territory in territories {
             if let sourceTouch = sourceTouch, sourceTouch != targetTouch {
-                Game.main.player?.drag(from: sourceTouch, to: territory.position)
-                return
+                level?.player?.drag(from: sourceTouch, to: territory.position)
+                break
             } else {
-                Game.main.player?.tap(territory.position)
-                return
+                level?.player?.tap(territory.position)
+                break
             }
         }
         targetTouch = nil
