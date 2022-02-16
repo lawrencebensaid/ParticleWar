@@ -11,29 +11,38 @@ import SpriteKit
 @main
 struct ParticleWarApp: App {
     
-    private let scene: GameScene = GameScene.newGameScene()
+    @State private var scene: GameScene = GameScene.newGameScene()
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     @State private var teams: [Team] = []
     
     var body: some Scene {
         WindowGroup {
-            ZStack(alignment: .topLeading) {
+            ZStack(alignment: .top) {
                 SpriteView(scene: scene)
-                VStack(alignment: .leading, spacing: 4) {
-                    ForEach(teams.sorted(by: { $0.score > $1.score }), id: \.name) { x in
-                        HStack {
-                            Image(systemName: "circle.circle.fill")
-                            Text("\(x.name)")
+                HStack(alignment: .top) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        ForEach(teams) { team in
+                            Label("\(team.name) \(team.score)", systemImage: "circle.circle.fill")
+                                .foregroundColor(Color(team.color))
                         }
-                        .foregroundColor(Color(x.color))
                     }
+                    .padding()
+                    Spacer()
+                    VStack(alignment: .leading, spacing: 4) {
+                        let client = scene.level?.player
+                        Label("\(client?.ownTerritories.count ?? 0)", systemImage: "circle.fill")
+                        Label("\(client?.armyCount ?? 0)/\(client?.capacity ?? 0)", systemImage: "diamond")
+                    }
+                    .padding(.top, 16)
+                    .padding([.top, .trailing], 8)
                 }
-                .padding()
             }
             .edgesIgnoringSafeArea(.all)
             .onReceive(timer) { _ in
-                teams = scene.level?.teams ?? []
+                withAnimation {
+                    teams = (scene.level?.teams ?? []).sorted(by: { $0.score > $1.score })
+                }
             }
         }
     }

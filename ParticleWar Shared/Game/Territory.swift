@@ -22,7 +22,7 @@ class Territory: NSObject, Codable {
     
     // Specs
     private var factory: Int = 20
-    private var capacity: Int = 50
+    public let capacity: Int = 50
     public let deploymentSpeed = 0.25
     public let productionSpeed = 0.01
     public let range: Double = 200

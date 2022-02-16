@@ -27,6 +27,8 @@ class Client: Hashable {
     public var territories: [Territory] { nodes.compactMap({ context?.territories[$0] }) }
     public var ownTerritories: [Territory] { territories.filter { $0.team == team } }
     public var otherTerritories: [Territory] { territories.filter { $0.team != team } }
+    public var armyCount: Int { ownTerritories.reduce(0) { $0 + $1.armies } }
+    public var capacity: Int { ownTerritories.reduce(0) { $0 + $1.capacity } }
     
     // Context
     public private(set) var context: GameScene?

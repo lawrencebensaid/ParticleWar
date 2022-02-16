@@ -7,7 +7,13 @@
 
 import SpriteKit
 
-class Team: Codable {
+class Team: Codable, Identifiable, ObservableObject, Equatable {
+    
+    public static func == (lhs: Team, rhs: Team) -> Bool {
+        lhs.name == rhs.name
+    }
+    
+    public var id = UUID()
     
     // Characteristics
     public let name: String
@@ -17,6 +23,7 @@ class Team: Codable {
     public var score: Int {
         var score: Int = 0
         for (_, value) in context?.territories ?? [:] {
+            if value.team != self { continue }
             score += value.armies
         }
         return score
@@ -48,18 +55,6 @@ class Team: Codable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(name, forKey: .name)
         try container.encode(color.hex, forKey: .color)
-    }
-    
-}
-
-extension Team: Hashable {
-    
-    public static func == (lhs: Team, rhs: Team) -> Bool {
-        lhs.name == rhs.name
-    }
-    
-    public func hash(into hasher: inout Hasher) {
-        
     }
     
 }

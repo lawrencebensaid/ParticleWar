@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, ObservableObject {
     
     private var sourceTouch: CGPoint?
     private var targetTouch: CGPoint?
