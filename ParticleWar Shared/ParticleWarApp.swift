@@ -38,6 +38,7 @@ struct ParticleWarApp: App {
                     .padding([.top, .trailing], 8)
                 }
             }
+            .foregroundColor(.white)
             .edgesIgnoringSafeArea(.all)
             .onReceive(timer) { _ in
                 withAnimation {

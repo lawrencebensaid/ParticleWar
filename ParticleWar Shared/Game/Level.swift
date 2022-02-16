@@ -38,14 +38,14 @@ class Level: NSObject, Codable {
         super.init()
         let container = try decoder.container(keyedBy: CodingKeys.self)
         teams = try container.decode([Team].self, forKey: .teams)
-        structures = try container.decode([Territory].self, forKey: .structures)
+        structures = (try container.decode([StructureContainer].self, forKey: .structures)).map { $0.structure }
 //        entities = try container.decode([Entity].self, forKey: .entities)
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(teams, forKey: .teams)
-        try container.encode(structures, forKey: .structures)
+        try container.encode(structures.map { StructureContainer($0) }, forKey: .structures)
 //        try container.encode(entities, forKey: .entities)
     }
     
@@ -69,6 +69,37 @@ class Level: NSObject, Codable {
     
     public func getTeamBy(name: String) -> Team? {
         return teams.filter({ $0.name == name }).first
+    }
+    
+}
+
+fileprivate struct StructureContainer: Codable {
+    
+    let structure: Territory
+    
+    private enum CodingKeys: CodingKey {
+        case type, structure
+    }
+    
+    init(_ structure: Territory) {
+        self.structure = structure
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let type = try container.decode(String.self, forKey: .type)
+        switch type {
+        case "HomeTerritory":
+            structure = try container.decode(HomeTerritory.self, forKey: .structure)
+        default:
+            structure = try container.decode(Territory.self, forKey: .structure)
+        }
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(structure, forKey: .structure)
+        try container.encode(String.init(describing: Swift.type(of: structure)), forKey: .type)
     }
     
 }

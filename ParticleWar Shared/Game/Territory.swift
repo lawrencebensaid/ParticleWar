@@ -18,7 +18,7 @@ class Territory: NSObject, Codable {
     public internal(set) var team: Team?
     
     // Temp
-    private var teamAssign: String?
+    internal var teamAssign: String?
     
     // Specs
     private var factory: Int = 20
@@ -30,7 +30,7 @@ class Territory: NSObject, Codable {
     // State
     private var attacking = false
     private var mana: Double = 0
-    private(set) var armies: Int = 10
+    public internal(set) var armies: Int = 10
     
     internal var context: GameScene?
     private let label = SKLabelNode(text: "")
@@ -62,7 +62,7 @@ class Territory: NSObject, Codable {
         set { node.strokeColor = newValue }
     }
     
-    private enum CodingKeys: CodingKey {
+    internal enum CodingKeys: CodingKey {
         case name, team
         case position
         case armies

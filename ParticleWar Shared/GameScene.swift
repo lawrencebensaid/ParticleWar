@@ -9,11 +9,16 @@ import SpriteKit
 
 class GameScene: SKScene, ObservableObject {
     
+    // Camera
+    private var previousCameraScale: CGFloat = 1
+    private var previousCameraPoint: CGPoint = .zero
+    private let cameraNode = SKCameraNode()
+    
     private var sourceTouch: CGPoint?
     private var targetTouch: CGPoint?
     private let dragLine = SKShapeNode()
     private var rangeIndicators: [Client: RangeIndicator] = [:]
-//    private var supplylines: [Client: [SupplyLine]] = [:]
+    //    private var supplylines: [Client: [SupplyLine]] = [:]
     
     public var territories: [SKNode: Territory] = [:]
     public var armies: [SKNode: Army] = [:]
@@ -30,6 +35,18 @@ class GameScene: SKScene, ObservableObject {
     }
     
     override func didMove(to view: SKView) {
+        camera = cameraNode
+        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureAction(_:)))
+        view.addGestureRecognizer(panGesture)
+        
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchGestureAction(_:)))
+        view.addGestureRecognizer(pinchGesture)
+        
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleTapAction(_:)))
+        doubleTap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(doubleTap)
+        
         self.setUpScene()
     }
     
@@ -72,19 +89,16 @@ class GameScene: SKScene, ObservableObject {
     
     private func getLevel() {
         
-        if let path = Bundle.main.path(forResource: "level", ofType: "json") {
-            guard let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe) else { return }
-            let decoder = JSONDecoder()
-            decoder.userInfo = [.context: self]
-            guard let level = try? decoder.decode(Level.self, from: data) else { return }
-            self.level = level
-        }
+        guard let path = Bundle.main.path(forResource: "level", ofType: "json") else { fatalError("File not found") }
+        guard let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe) else { fatalError("File not readable") }
+        let decoder = JSONDecoder()
+        decoder.userInfo = [.context: self]
+        guard let level = try? decoder.decode(Level.self, from: data) else { fatalError("Decode failure") }
+        self.level = level
         
     }
     
     private func setUpScene() {
-        let label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        label?.removeFromParent()
         
         getLevel()
         
@@ -94,12 +108,6 @@ class GameScene: SKScene, ObservableObject {
         level.add(bot: Bot(client: Client(level.getTeamBy(name: "Red")!, showActions: true)))
         level.add(bot: Bot(client: Client(level.getTeamBy(name: "Yellow")!, showActions: true)))
         level.add(bot: Bot(client: Client(level.getTeamBy(name: "Green")!, showActions: true)))
-        
-        for team in level.teams {
-            let label = SKLabelNode(text: "\(team.name)")
-            label.position = .init(x: -frame.width / 2 - 100, y: -frame.height / 2 - 100)
-            addChild(label)
-        }
         
         for structure in level.structures {
             add(structure)
@@ -111,7 +119,7 @@ class GameScene: SKScene, ObservableObject {
     }
     
     override func update(_ currentTime: TimeInterval) {
-
+        
         for bot in level?.bots ?? [] {
             bot.update()
         }
@@ -203,6 +211,64 @@ extension GameScene {
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("touchesCancelled()")
+    }
+    
+    @objc func doubleTapAction(_ sender: UITapGestureRecognizer) {
+//        guard let camera = camera else { return }
+//        guard let view = view else { return }
+//        let target = sender.location(in: view)
+//        let translation = CGPoint(x: target.x - view.frame.width / 2, y: target.y - view.frame.height / 2)
+//        let point = CGPoint(x: translation.x + camera.position.x, y: -(translation.y + camera.position.y))
+//        print("\(point.x), \(point.y)")
+//        let move: SKAction = .move(to: CGPoint(x: point.x, y: point.y), duration: 0.75)
+//        move.timingMode = .easeInEaseOut
+//        camera.move(toParent: self)
+//        camera.run(move, withKey: "moving")
+    }
+    
+    @objc func pinchGestureAction(_ sender: UIPinchGestureRecognizer) {
+        guard let camera = self.camera else { return }
+        if sender.state == .began {
+            previousCameraScale = camera.xScale
+        }
+        camera.setScale(previousCameraScale * 1 / sender.scale)
+    }
+    
+    @objc func panGestureAction(_ sender: UIPanGestureRecognizer) {
+        guard let camera = self.camera else { print("NO CAMEREA"); return }
+        switch sender.state {
+        case .began:
+            previousCameraPoint = camera.position
+        case .changed:
+            let translation = sender.translation(in: view)
+            let newPosition = CGPoint(
+                x: previousCameraPoint.x + translation.x * -camera.xScale,
+                y: previousCameraPoint.y + translation.y * camera.xScale
+            )
+            camera.position = newPosition
+//        case .ended, .cancelled:
+//            let velocity = sender.velocity(in: self.view)
+//            let position = CGPoint(
+//                x: previousCameraPoint.x + velocity.x * -1,
+//                y: previousCameraPoint.y + velocity.y
+//            )
+////            camera.position = position
+//            let move = SKAction.move(to: position, duration: Double(slideFactor))
+//            move.timingMode = .easeOut
+//            camera.move(toParent: self)
+//            camera.run(move, withKey: "moving")
+        default: break
+        }
+        
+        let boundry: CGFloat = 800
+        if camera.position.x > boundry || camera.position.x < -boundry || camera.position.y > boundry || camera.position.y < -boundry {
+            let points = self.territories.keys.map({ $0.position })
+            guard let target = camera.position.nearest(points).first else { return }
+            let move: SKAction = .move(to: target, duration: 0.75)
+            move.timingMode = .easeInEaseOut
+            camera.move(toParent: self)
+            camera.run(move, withKey: "moving")
+        }
     }
     
 }

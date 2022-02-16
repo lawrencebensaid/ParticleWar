@@ -37,72 +37,62 @@
     "entities": [],
     "structures": [
         {
-            "position": [0, 150]
+            "type": "Territory",
+            "structure": {
+                "position": [100, 0]
+            }
         },
         {
-            "position": [0, 0]
+            "type": "Territory",
+            "structure": {
+                "position": [0, 100]
+                
+            }
         },
         {
-            "position": [0, -150]
-        },
-        
-        {
-            "position": [150, 75]
-        },
-        {
-            "position": [150, -75]
+            "type": "Territory",
+            "structure": {
+                "position": [0, -100]
+            }
         },
         {
-            "position": [250, 50]
-        },
-        {
-            "position": [250, -50]
-        },
-        {
-            "position": [250, 150]
-        },
-        {
-            "position": [250, -150]
+            "type": "Territory",
+            "structure": {
+                "position": [-100, 0]
+            }
         },
         
         {
-            "position": [-150, 75]
+            "type": "HomeTerritory",
+            "structure": {
+                "position": [200, 0],
+                "armies": 20,
+                "team": "Blue"
+            }
         },
         {
-            "position": [-150, -75]
+            "type": "HomeTerritory",
+            "structure": {
+                "position": [0, 200],
+                "armies": 20,
+                "team": "Green"
+            }
         },
         {
-            "position": [-250, 50]
+            "type": "HomeTerritory",
+            "structure": {
+                "position": [0, -200],
+                "armies": 20,
+                "team": "Red"
+            }
         },
         {
-            "position": [-250, -50]
-        },
-        {
-            "position": [-250, 150]
-        },
-        {
-            "position": [-250, -150]
-        },
-        
-        {
-            "position": [400, 100],
-            "armies": 20,
-            "team": "Blue"
-        },
-        {
-            "position": [400, -100],
-            "armies": 20,
-            "team": "Green"
-        },
-        {
-            "position": [-400, 100],
-            "armies": 20,
-            "team": "Red"
-        },
-        {
-            "position": [-400, -100],
-            "armies": 20,
-            "team": "Yellow"
+            "type": "HomeTerritory",
+            "structure": {
+                "position": [-200, 0],
+                "armies": 20,
+                "team": "Yellow"
+            }
         }
     ]
 }
