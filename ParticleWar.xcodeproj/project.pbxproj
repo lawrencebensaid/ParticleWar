@@ -3,127 +3,137 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D3912DF27BAFC070094C784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3912DE27BAFC070094C784 /* Preview Assets.xcassets */; };
-		4D3912E327BAFC4F0094C784 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7E727BAECE700DF2091 /* GameScene.sks */; };
-		4D3912E427BAFC4F0094C784 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7ED27BAECEE00DF2091 /* GameScene.swift */; };
-		4D3912E527BAFC4F0094C784 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7E827BAECE700DF2091 /* Actions.sks */; };
-		4D3912E627BAFC4F0094C784 /* ParticleWarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7BE27BAEB8600DF2091 /* ParticleWarApp.swift */; };
-		4D3912E727BAFC4F0094C784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7E427BAECB800DF2091 /* Assets.xcassets */; };
-		4D3912E827BAFC530094C784 /* level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7F427BAED3400DF2091 /* level2.json */; };
-		4D3912E927BAFC560094C784 /* RangeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7F727BAED3C00DF2091 /* RangeIndicator.swift */; };
-		4D3912EA27BAFC590094C784 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FF27BAED5100DF2091 /* Game.swift */; };
-		4D3912EB27BAFC590094C784 /* Highway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FA27BAED5100DF2091 /* Highway.swift */; };
-		4D3912EC27BAFC590094C784 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FE27BAED5100DF2091 /* Level.swift */; };
-		4D3912ED27BAFC590094C784 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FD27BAED5100DF2091 /* Team.swift */; };
-		4D3912EE27BAFC590094C784 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FC27BAED5100DF2091 /* Bot.swift */; };
-		4D3912EF27BAFC590094C784 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FB27BAED5100DF2091 /* Client.swift */; };
-		4D3912F027BAFC5D0094C784 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81D27BAEEAF00DF2091 /* CGPoint.swift */; };
-		4D3912F127BAFC5D0094C784 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81C27BAEEAE00DF2091 /* CodingUserInfoKey.swift */; };
-		4D3912F227BAFC5D0094C784 /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81E27BAEEAF00DF2091 /* SKNode.swift */; };
-		4D3912F327BAFC620094C784 /* Army.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B80E27BAEDD300DF2091 /* Army.swift */; };
-		4D3912F427BAFC620094C784 /* Territory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81427BAEDE000DF2091 /* Territory.swift */; };
-		4D3912F527BAFC620094C784 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B80F27BAEDD300DF2091 /* Entity.swift */; };
-		4D3912F627BAFC620094C784 /* HomeTerritory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81527BAEDE000DF2091 /* HomeTerritory.swift */; };
-		4D3912F727BAFD000094C784 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1C53C27BAFA5E00BB3DD3 /* UIColor.swift */; };
-		4D54B7CE27BAEB8700DF2091 /* ParticleWarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7BE27BAEB8600DF2091 /* ParticleWarApp.swift */; };
-		4D54B7CF27BAEB8700DF2091 /* ParticleWarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7BE27BAEB8600DF2091 /* ParticleWarApp.swift */; };
-		4D54B7E527BAECB800DF2091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7E427BAECB800DF2091 /* Assets.xcassets */; };
-		4D54B7E627BAECB800DF2091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7E427BAECB800DF2091 /* Assets.xcassets */; };
-		4D54B7E927BAECE700DF2091 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7E727BAECE700DF2091 /* GameScene.sks */; };
-		4D54B7EA27BAECE700DF2091 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7E727BAECE700DF2091 /* GameScene.sks */; };
-		4D54B7EB27BAECE700DF2091 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7E827BAECE700DF2091 /* Actions.sks */; };
-		4D54B7EC27BAECE700DF2091 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7E827BAECE700DF2091 /* Actions.sks */; };
-		4D54B7F127BAED0600DF2091 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7F027BAED0600DF2091 /* NSColor.swift */; };
-		4D54B7F327BAED0E00DF2091 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7F227BAED0E00DF2091 /* UIColor.swift */; };
-		4D54B7F527BAED3400DF2091 /* level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7F427BAED3400DF2091 /* level2.json */; };
-		4D54B7F627BAED3400DF2091 /* level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D54B7F427BAED3400DF2091 /* level2.json */; };
-		4D54B7F827BAED3C00DF2091 /* RangeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7F727BAED3C00DF2091 /* RangeIndicator.swift */; };
-		4D54B7F927BAED3C00DF2091 /* RangeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7F727BAED3C00DF2091 /* RangeIndicator.swift */; };
-		4D54B80027BAED5100DF2091 /* Highway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FA27BAED5100DF2091 /* Highway.swift */; };
-		4D54B80127BAED5100DF2091 /* Highway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FA27BAED5100DF2091 /* Highway.swift */; };
-		4D54B80227BAED5100DF2091 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FB27BAED5100DF2091 /* Client.swift */; };
-		4D54B80327BAED5100DF2091 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FB27BAED5100DF2091 /* Client.swift */; };
-		4D54B80427BAED5100DF2091 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FC27BAED5100DF2091 /* Bot.swift */; };
-		4D54B80527BAED5100DF2091 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FC27BAED5100DF2091 /* Bot.swift */; };
-		4D54B80627BAED5100DF2091 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FD27BAED5100DF2091 /* Team.swift */; };
-		4D54B80727BAED5100DF2091 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FD27BAED5100DF2091 /* Team.swift */; };
-		4D54B80827BAED5100DF2091 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FE27BAED5100DF2091 /* Level.swift */; };
-		4D54B80927BAED5100DF2091 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FE27BAED5100DF2091 /* Level.swift */; };
-		4D54B80A27BAED5100DF2091 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FF27BAED5100DF2091 /* Game.swift */; };
-		4D54B80B27BAED5100DF2091 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7FF27BAED5100DF2091 /* Game.swift */; };
-		4D54B81027BAEDD300DF2091 /* Army.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B80E27BAEDD300DF2091 /* Army.swift */; };
-		4D54B81127BAEDD300DF2091 /* Army.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B80E27BAEDD300DF2091 /* Army.swift */; };
-		4D54B81227BAEDD300DF2091 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B80F27BAEDD300DF2091 /* Entity.swift */; };
-		4D54B81327BAEDD300DF2091 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B80F27BAEDD300DF2091 /* Entity.swift */; };
-		4D54B81627BAEDE100DF2091 /* Territory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81427BAEDE000DF2091 /* Territory.swift */; };
-		4D54B81727BAEDE100DF2091 /* Territory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81427BAEDE000DF2091 /* Territory.swift */; };
-		4D54B81827BAEDE100DF2091 /* HomeTerritory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81527BAEDE000DF2091 /* HomeTerritory.swift */; };
-		4D54B81927BAEDE100DF2091 /* HomeTerritory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81527BAEDE000DF2091 /* HomeTerritory.swift */; };
-		4D54B81A27BAEE8700DF2091 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7ED27BAECEE00DF2091 /* GameScene.swift */; };
-		4D54B81B27BAEE8700DF2091 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B7ED27BAECEE00DF2091 /* GameScene.swift */; };
-		4D54B81F27BAEEAF00DF2091 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81C27BAEEAE00DF2091 /* CodingUserInfoKey.swift */; };
-		4D54B82027BAEEAF00DF2091 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81C27BAEEAE00DF2091 /* CodingUserInfoKey.swift */; };
-		4D54B82127BAEEAF00DF2091 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81D27BAEEAF00DF2091 /* CGPoint.swift */; };
-		4D54B82227BAEEAF00DF2091 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81D27BAEEAF00DF2091 /* CGPoint.swift */; };
-		4D54B82327BAEEAF00DF2091 /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81E27BAEEAF00DF2091 /* SKNode.swift */; };
-		4D54B82427BAEEAF00DF2091 /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B81E27BAEEAF00DF2091 /* SKNode.swift */; };
-		4DFF6E1D27BD60EC00EA3C54 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DFF6E1C27BD5FD800EA3C54 /* level.json */; };
-		4DFF6E1E27BD60EC00EA3C54 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DFF6E1C27BD5FD800EA3C54 /* level.json */; };
-		4DFF6E1F27BD60ED00EA3C54 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DFF6E1C27BD5FD800EA3C54 /* level.json */; };
+		4D1B348728FC58FA00BD94B6 /* Highway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1B348628FC58FA00BD94B6 /* Highway.swift */; };
+		4D1B348828FC58FA00BD94B6 /* Highway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1B348628FC58FA00BD94B6 /* Highway.swift */; };
+		4D1B348928FC58FA00BD94B6 /* Highway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1B348628FC58FA00BD94B6 /* Highway.swift */; };
+		4D55959228FC1D5F00D558B1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D55955F28FC1D5B00D558B1 /* Actions.sks */; };
+		4D55959328FC1D5F00D558B1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D55955F28FC1D5B00D558B1 /* Actions.sks */; };
+		4D55959428FC1D5F00D558B1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D55955F28FC1D5B00D558B1 /* Actions.sks */; };
+		4D55959528FC1D5F00D558B1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D55956028FC1D5B00D558B1 /* GameScene.sks */; };
+		4D55959628FC1D5F00D558B1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D55956028FC1D5B00D558B1 /* GameScene.sks */; };
+		4D55959728FC1D5F00D558B1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4D55956028FC1D5B00D558B1 /* GameScene.sks */; };
+		4D55959828FC1D5F00D558B1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55956128FC1D5B00D558B1 /* GameScene.swift */; };
+		4D55959928FC1D5F00D558B1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55956128FC1D5B00D558B1 /* GameScene.swift */; };
+		4D55959A28FC1D5F00D558B1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55956128FC1D5B00D558B1 /* GameScene.swift */; };
+		4D55959B28FC1D5F00D558B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D55956228FC1D5F00D558B1 /* Assets.xcassets */; };
+		4D55959C28FC1D5F00D558B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D55956228FC1D5F00D558B1 /* Assets.xcassets */; };
+		4D55959D28FC1D5F00D558B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D55956228FC1D5F00D558B1 /* Assets.xcassets */; };
+		4D5595AA28FC1F5B00D558B1 /* ParticleWarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595A928FC1F5B00D558B1 /* ParticleWarApp.swift */; };
+		4D5595AB28FC1F6800D558B1 /* ParticleWarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595A928FC1F5B00D558B1 /* ParticleWarApp.swift */; };
+		4D5595AC28FC1F6800D558B1 /* ParticleWarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595A928FC1F5B00D558B1 /* ParticleWarApp.swift */; };
+		4D5595B128FC213500D558B1 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595AE28FC213400D558B1 /* CGPoint.swift */; };
+		4D5595B228FC213500D558B1 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595AE28FC213400D558B1 /* CGPoint.swift */; };
+		4D5595B328FC213500D558B1 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595AE28FC213400D558B1 /* CGPoint.swift */; };
+		4D5595B428FC213500D558B1 /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595AF28FC213400D558B1 /* SKNode.swift */; };
+		4D5595B528FC213500D558B1 /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595AF28FC213400D558B1 /* SKNode.swift */; };
+		4D5595B628FC213500D558B1 /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595AF28FC213400D558B1 /* SKNode.swift */; };
+		4D5595B728FC213500D558B1 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595B028FC213500D558B1 /* CodingUserInfoKey.swift */; };
+		4D5595B828FC213500D558B1 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595B028FC213500D558B1 /* CodingUserInfoKey.swift */; };
+		4D5595B928FC213500D558B1 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595B028FC213500D558B1 /* CodingUserInfoKey.swift */; };
+		4D5595C128FC22A300D558B1 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5595BF28FC22A300D558B1 /* level.json */; };
+		4D5595C228FC22A300D558B1 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5595BF28FC22A300D558B1 /* level.json */; };
+		4D5595C328FC22A300D558B1 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5595BF28FC22A300D558B1 /* level.json */; };
+		4D5595C428FC22A300D558B1 /* level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5595C028FC22A300D558B1 /* level2.json */; };
+		4D5595C528FC22A300D558B1 /* level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5595C028FC22A300D558B1 /* level2.json */; };
+		4D5595C628FC22A300D558B1 /* level2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5595C028FC22A300D558B1 /* level2.json */; };
+		4D55961328FC243E00D558B1 /* GameScene>Interactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55961228FC243E00D558B1 /* GameScene>Interactions.swift */; };
+		4D55961428FC243E00D558B1 /* GameScene>Interactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55961228FC243E00D558B1 /* GameScene>Interactions.swift */; };
+		4D55961528FC243E00D558B1 /* GameScene>Interactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55961228FC243E00D558B1 /* GameScene>Interactions.swift */; };
+		4D55961728FC29C400D558B1 /* GameScene>LoadLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55961628FC29C400D558B1 /* GameScene>LoadLevel.swift */; };
+		4D55961828FC29C400D558B1 /* GameScene>LoadLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55961628FC29C400D558B1 /* GameScene>LoadLevel.swift */; };
+		4D55961928FC29C400D558B1 /* GameScene>LoadLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55961628FC29C400D558B1 /* GameScene>LoadLevel.swift */; };
+		4D55961A28FC2A1F00D558B1 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D628FC22EE00D558B1 /* Client.swift */; };
+		4D55961B28FC2A1F00D558B1 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D928FC22EE00D558B1 /* Level.swift */; };
+		4D55961C28FC2A1F00D558B1 /* Army.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595C928FC22ED00D558B1 /* Army.swift */; };
+		4D55961D28FC2A1F00D558B1 /* Territory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595CA28FC22EE00D558B1 /* Territory.swift */; };
+		4D55961E28FC2A1F00D558B1 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595C828FC22ED00D558B1 /* Bot.swift */; };
+		4D55961F28FC2A1F00D558B1 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D828FC22EE00D558B1 /* Entity.swift */; };
+		4D55962028FC2A1F00D558B1 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595C728FC22ED00D558B1 /* Team.swift */; };
+		4D55962128FC2A1F00D558B1 /* HomeTerritory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D728FC22EE00D558B1 /* HomeTerritory.swift */; };
+		4D55962228FC2A1F00D558B1 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D628FC22EE00D558B1 /* Client.swift */; };
+		4D55962328FC2A1F00D558B1 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D928FC22EE00D558B1 /* Level.swift */; };
+		4D55962428FC2A1F00D558B1 /* Army.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595C928FC22ED00D558B1 /* Army.swift */; };
+		4D55962528FC2A1F00D558B1 /* Territory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595CA28FC22EE00D558B1 /* Territory.swift */; };
+		4D55962628FC2A1F00D558B1 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595C828FC22ED00D558B1 /* Bot.swift */; };
+		4D55962728FC2A1F00D558B1 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D828FC22EE00D558B1 /* Entity.swift */; };
+		4D55962828FC2A1F00D558B1 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595C728FC22ED00D558B1 /* Team.swift */; };
+		4D55962928FC2A1F00D558B1 /* HomeTerritory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D728FC22EE00D558B1 /* HomeTerritory.swift */; };
+		4D55962A28FC2A2000D558B1 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D628FC22EE00D558B1 /* Client.swift */; };
+		4D55962B28FC2A2000D558B1 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D928FC22EE00D558B1 /* Level.swift */; };
+		4D55962C28FC2A2000D558B1 /* Army.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595C928FC22ED00D558B1 /* Army.swift */; };
+		4D55962D28FC2A2000D558B1 /* Territory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595CA28FC22EE00D558B1 /* Territory.swift */; };
+		4D55962E28FC2A2000D558B1 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595C828FC22ED00D558B1 /* Bot.swift */; };
+		4D55962F28FC2A2000D558B1 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D828FC22EE00D558B1 /* Entity.swift */; };
+		4D55963028FC2A2000D558B1 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595C728FC22ED00D558B1 /* Team.swift */; };
+		4D55963128FC2A2000D558B1 /* HomeTerritory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5595D728FC22EE00D558B1 /* HomeTerritory.swift */; };
+		4D55963328FC2B4700D558B1 /* GameScene>Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55963228FC2B4700D558B1 /* GameScene>Game.swift */; };
+		4D55963428FC2B4700D558B1 /* GameScene>Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55963228FC2B4700D558B1 /* GameScene>Game.swift */; };
+		4D55963528FC2B4700D558B1 /* GameScene>Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55963228FC2B4700D558B1 /* GameScene>Game.swift */; };
+		4D55963928FC2BB800D558B1 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55963628FC2BB700D558B1 /* NSColor.swift */; };
+		4D55963D28FC2C7400D558B1 /* RangeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55963C28FC2C7400D558B1 /* RangeIndicator.swift */; };
+		4D55963E28FC2C7400D558B1 /* RangeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55963C28FC2C7400D558B1 /* RangeIndicator.swift */; };
+		4D55963F28FC2C7400D558B1 /* RangeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55963C28FC2C7400D558B1 /* RangeIndicator.swift */; };
+		4D55964228FC2CFF00D558B1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55964128FC2CFF00D558B1 /* UIColor.swift */; };
+		4D55964728FC2D2900D558B1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55964628FC2D2900D558B1 /* UIColor.swift */; };
+		4D55964928FC2FB900D558B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55964828FC2FB900D558B1 /* Game.swift */; };
+		4D55964A28FC303300D558B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55964828FC2FB900D558B1 /* Game.swift */; };
+		4D55964B28FC303400D558B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55964828FC2FB900D558B1 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D3912D527BAFC060094C784 /* ParticleWar (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ParticleWar (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D3912DE27BAFC070094C784 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4D54B7BE27BAEB8600DF2091 /* ParticleWarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleWarApp.swift; sourceTree = "<group>"; };
-		4D54B7C527BAEB8700DF2091 /* ParticleWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D54B7CB27BAEB8700DF2091 /* ParticleWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D54B7CD27BAEB8700DF2091 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		4D54B7E427BAECB800DF2091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4D54B7E727BAECE700DF2091 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		4D54B7E827BAECE700DF2091 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		4D54B7ED27BAECEE00DF2091 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		4D54B7F027BAED0600DF2091 /* NSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
-		4D54B7F227BAED0E00DF2091 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		4D54B7F427BAED3400DF2091 /* level2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level2.json; sourceTree = "<group>"; };
-		4D54B7F727BAED3C00DF2091 /* RangeIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeIndicator.swift; sourceTree = "<group>"; };
-		4D54B7FA27BAED5100DF2091 /* Highway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highway.swift; sourceTree = "<group>"; };
-		4D54B7FB27BAED5100DF2091 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
-		4D54B7FC27BAED5100DF2091 /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
-		4D54B7FD27BAED5100DF2091 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		4D54B7FE27BAED5100DF2091 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
-		4D54B7FF27BAED5100DF2091 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		4D54B80E27BAEDD300DF2091 /* Army.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Army.swift; sourceTree = "<group>"; };
-		4D54B80F27BAEDD300DF2091 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
-		4D54B81427BAEDE000DF2091 /* Territory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Territory.swift; sourceTree = "<group>"; };
-		4D54B81527BAEDE000DF2091 /* HomeTerritory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTerritory.swift; sourceTree = "<group>"; };
-		4D54B81C27BAEEAE00DF2091 /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
-		4D54B81D27BAEEAF00DF2091 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
-		4D54B81E27BAEEAF00DF2091 /* SKNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNode.swift; sourceTree = "<group>"; };
-		4DE1C53C27BAFA5E00BB3DD3 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		4DFF6E1C27BD5FD800EA3C54 /* level.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = level.json; sourceTree = "<group>"; };
+		4D1B348628FC58FA00BD94B6 /* Highway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highway.swift; sourceTree = "<group>"; };
+		4D55955F28FC1D5B00D558B1 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		4D55956028FC1D5B00D558B1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		4D55956128FC1D5B00D558B1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		4D55956228FC1D5F00D558B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D55956728FC1D5F00D558B1 /* ParticleWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D55957828FC1D5F00D558B1 /* ParticleWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D55958828FC1D5F00D558B1 /* ParticleWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D55959128FC1D5F00D558B1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		4D5595A928FC1F5B00D558B1 /* ParticleWarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleWarApp.swift; sourceTree = "<group>"; };
+		4D5595AE28FC213400D558B1 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		4D5595AF28FC213400D558B1 /* SKNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNode.swift; sourceTree = "<group>"; };
+		4D5595B028FC213500D558B1 /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
+		4D5595BF28FC22A300D558B1 /* level.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level.json; sourceTree = "<group>"; };
+		4D5595C028FC22A300D558B1 /* level2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level2.json; sourceTree = "<group>"; };
+		4D5595C728FC22ED00D558B1 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		4D5595C828FC22ED00D558B1 /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
+		4D5595C928FC22ED00D558B1 /* Army.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Army.swift; sourceTree = "<group>"; };
+		4D5595CA28FC22EE00D558B1 /* Territory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Territory.swift; sourceTree = "<group>"; };
+		4D5595D628FC22EE00D558B1 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		4D5595D728FC22EE00D558B1 /* HomeTerritory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTerritory.swift; sourceTree = "<group>"; };
+		4D5595D828FC22EE00D558B1 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		4D5595D928FC22EE00D558B1 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		4D55961228FC243E00D558B1 /* GameScene>Interactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene>Interactions.swift"; sourceTree = "<group>"; };
+		4D55961628FC29C400D558B1 /* GameScene>LoadLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene>LoadLevel.swift"; sourceTree = "<group>"; };
+		4D55963228FC2B4700D558B1 /* GameScene>Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene>Game.swift"; sourceTree = "<group>"; };
+		4D55963628FC2BB700D558B1 /* NSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
+		4D55963C28FC2C7400D558B1 /* RangeIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeIndicator.swift; sourceTree = "<group>"; };
+		4D55964128FC2CFF00D558B1 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		4D55964628FC2D2900D558B1 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		4D55964828FC2FB900D558B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4D3912D227BAFC060094C784 /* Frameworks */ = {
+		4D55956428FC1D5F00D558B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D54B7C227BAEB8700DF2091 /* Frameworks */ = {
+		4D55957528FC1D5F00D558B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D54B7C827BAEB8700DF2091 /* Frameworks */ = {
+		4D55958528FC1D5F00D558B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,157 +143,151 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D3912D627BAFC060094C784 /* ParticleWar tvOS */ = {
+		4D55955928FC1D5B00D558B1 = {
 			isa = PBXGroup;
 			children = (
-				4DE1C51527BAF97F00BB3DD3 /* Extensions */,
-				4D3912DD27BAFC070094C784 /* Preview */,
-			);
-			path = "ParticleWar tvOS";
-			sourceTree = "<group>";
-		};
-		4D3912DD27BAFC070094C784 /* Preview */ = {
-			isa = PBXGroup;
-			children = (
-				4D3912DE27BAFC070094C784 /* Preview Assets.xcassets */,
-			);
-			path = Preview;
-			sourceTree = "<group>";
-		};
-		4D54B7B827BAEB8500DF2091 = {
-			isa = PBXGroup;
-			children = (
-				4D54B7BD27BAEB8600DF2091 /* ParticleWar Shared */,
-				4D54B7DC27BAEBBB00DF2091 /* ParticleWar iOS */,
-				4D54B7CC27BAEB8700DF2091 /* ParticleWar macOS */,
-				4D3912D627BAFC060094C784 /* ParticleWar tvOS */,
-				4D54B7C627BAEB8700DF2091 /* Products */,
+				4D55955E28FC1D5B00D558B1 /* Shared */,
+				4D55956928FC1D5F00D558B1 /* iOS */,
+				4D55958928FC1D5F00D558B1 /* macOS */,
+				4D55957928FC1D5F00D558B1 /* tvOS */,
+				4D55956828FC1D5F00D558B1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4D54B7BD27BAEB8600DF2091 /* ParticleWar Shared */ = {
+		4D55955E28FC1D5B00D558B1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				4D54B7E027BAEBEB00DF2091 /* Extensions */,
-				4D54B7E127BAEBFF00DF2091 /* Game */,
-				4D54B7E227BAEC1F00DF2091 /* GUI */,
-				4D54B7E327BAEC2600DF2091 /* Level */,
-				4D54B7E827BAECE700DF2091 /* Actions.sks */,
-				4D54B7E727BAECE700DF2091 /* GameScene.sks */,
-				4D54B7ED27BAECEE00DF2091 /* GameScene.swift */,
-				4D54B7BE27BAEB8600DF2091 /* ParticleWarApp.swift */,
-				4D54B7E427BAECB800DF2091 /* Assets.xcassets */,
+				4D5595AD28FC211B00D558B1 /* Extensions */,
+				4D5595BD28FC227400D558B1 /* Game */,
+				4D5595BE28FC228500D558B1 /* Level */,
+				4D55963B28FC2C6900D558B1 /* GUI */,
+				4D55964828FC2FB900D558B1 /* Game.swift */,
+				4D55956128FC1D5B00D558B1 /* GameScene.swift */,
+				4D55963228FC2B4700D558B1 /* GameScene>Game.swift */,
+				4D55961628FC29C400D558B1 /* GameScene>LoadLevel.swift */,
+				4D55961228FC243E00D558B1 /* GameScene>Interactions.swift */,
+				4D5595A928FC1F5B00D558B1 /* ParticleWarApp.swift */,
+				4D55955F28FC1D5B00D558B1 /* Actions.sks */,
+				4D55956028FC1D5B00D558B1 /* GameScene.sks */,
+				4D55956228FC1D5F00D558B1 /* Assets.xcassets */,
 			);
-			path = "ParticleWar Shared";
+			path = Shared;
 			sourceTree = "<group>";
 		};
-		4D54B7C627BAEB8700DF2091 /* Products */ = {
+		4D55956828FC1D5F00D558B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4D54B7C527BAEB8700DF2091 /* ParticleWar.app */,
-				4D54B7CB27BAEB8700DF2091 /* ParticleWar.app */,
-				4D3912D527BAFC060094C784 /* ParticleWar (tvOS).app */,
+				4D55956728FC1D5F00D558B1 /* ParticleWar.app */,
+				4D55957828FC1D5F00D558B1 /* ParticleWar.app */,
+				4D55958828FC1D5F00D558B1 /* ParticleWar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D54B7CC27BAEB8700DF2091 /* ParticleWar macOS */ = {
+		4D55956928FC1D5F00D558B1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4D54B7DF27BAEBE500DF2091 /* Extensions */,
-				4D54B7CD27BAEB8700DF2091 /* macOS.entitlements */,
+				4D55964028FC2CEC00D558B1 /* Extensions */,
 			);
-			path = "ParticleWar macOS";
+			path = iOS;
 			sourceTree = "<group>";
 		};
-		4D54B7DC27BAEBBB00DF2091 /* ParticleWar iOS */ = {
+		4D55957928FC1D5F00D558B1 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				4D54B7DE27BAEBDF00DF2091 /* Extensions */,
+				4D55964528FC2D1900D558B1 /* Extensions */,
 			);
-			path = "ParticleWar iOS";
+			path = tvOS;
 			sourceTree = "<group>";
 		};
-		4D54B7DE27BAEBDF00DF2091 /* Extensions */ = {
+		4D55958928FC1D5F00D558B1 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				4D54B7F227BAED0E00DF2091 /* UIColor.swift */,
+				4D55963A28FC2BBC00D558B1 /* Extensions */,
+				4D55959128FC1D5F00D558B1 /* macOS.entitlements */,
 			);
-			path = Extensions;
+			path = macOS;
 			sourceTree = "<group>";
 		};
-		4D54B7DF27BAEBE500DF2091 /* Extensions */ = {
+		4D5595AD28FC211B00D558B1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4D54B7F027BAED0600DF2091 /* NSColor.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		4D54B7E027BAEBEB00DF2091 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4D54B81D27BAEEAF00DF2091 /* CGPoint.swift */,
-				4D54B81C27BAEEAE00DF2091 /* CodingUserInfoKey.swift */,
-				4D54B81E27BAEEAF00DF2091 /* SKNode.swift */,
+				4D5595AE28FC213400D558B1 /* CGPoint.swift */,
+				4D5595B028FC213500D558B1 /* CodingUserInfoKey.swift */,
+				4D5595AF28FC213400D558B1 /* SKNode.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4D54B7E127BAEBFF00DF2091 /* Game */ = {
+		4D5595BD28FC227400D558B1 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				4D54B80C27BAEDBC00DF2091 /* Structures */,
-				4D54B80D27BAEDC800DF2091 /* Entities */,
-				4D54B7FC27BAED5100DF2091 /* Bot.swift */,
-				4D54B7FB27BAED5100DF2091 /* Client.swift */,
-				4D54B7FF27BAED5100DF2091 /* Game.swift */,
-				4D54B7FA27BAED5100DF2091 /* Highway.swift */,
-				4D54B7FE27BAED5100DF2091 /* Level.swift */,
-				4D54B7FD27BAED5100DF2091 /* Team.swift */,
+				4D55961028FC230B00D558B1 /* Entities */,
+				4D55961128FC232600D558B1 /* Structures */,
+				4D5595C828FC22ED00D558B1 /* Bot.swift */,
+				4D5595D628FC22EE00D558B1 /* Client.swift */,
+				4D1B348628FC58FA00BD94B6 /* Highway.swift */,
+				4D5595D928FC22EE00D558B1 /* Level.swift */,
+				4D5595C728FC22ED00D558B1 /* Team.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
 		};
-		4D54B7E227BAEC1F00DF2091 /* GUI */ = {
+		4D5595BE28FC228500D558B1 /* Level */ = {
 			isa = PBXGroup;
 			children = (
-				4D54B7F727BAED3C00DF2091 /* RangeIndicator.swift */,
-			);
-			path = GUI;
-			sourceTree = "<group>";
-		};
-		4D54B7E327BAEC2600DF2091 /* Level */ = {
-			isa = PBXGroup;
-			children = (
-				4D54B7F427BAED3400DF2091 /* level2.json */,
-				4DFF6E1C27BD5FD800EA3C54 /* level.json */,
+				4D5595BF28FC22A300D558B1 /* level.json */,
+				4D5595C028FC22A300D558B1 /* level2.json */,
 			);
 			path = Level;
 			sourceTree = "<group>";
 		};
-		4D54B80C27BAEDBC00DF2091 /* Structures */ = {
+		4D55961028FC230B00D558B1 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				4D54B81527BAEDE000DF2091 /* HomeTerritory.swift */,
-				4D54B81427BAEDE000DF2091 /* Territory.swift */,
-			);
-			name = Structures;
-			sourceTree = "<group>";
-		};
-		4D54B80D27BAEDC800DF2091 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				4D54B80E27BAEDD300DF2091 /* Army.swift */,
-				4D54B80F27BAEDD300DF2091 /* Entity.swift */,
+				4D5595D828FC22EE00D558B1 /* Entity.swift */,
+				4D5595C928FC22ED00D558B1 /* Army.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		4DE1C51527BAF97F00BB3DD3 /* Extensions */ = {
+		4D55961128FC232600D558B1 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
-				4DE1C53C27BAFA5E00BB3DD3 /* UIColor.swift */,
+				4D5595CA28FC22EE00D558B1 /* Territory.swift */,
+				4D5595D728FC22EE00D558B1 /* HomeTerritory.swift */,
+			);
+			name = Structures;
+			sourceTree = "<group>";
+		};
+		4D55963A28FC2BBC00D558B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D55963628FC2BB700D558B1 /* NSColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D55963B28FC2C6900D558B1 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				4D55963C28FC2C7400D558B1 /* RangeIndicator.swift */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		4D55964028FC2CEC00D558B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D55964128FC2CFF00D558B1 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D55964528FC2D1900D558B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D55964628FC2D2900D558B1 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -291,279 +295,229 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4D3912D427BAFC060094C784 /* ParticleWar (tvOS) */ = {
+		4D55956628FC1D5F00D558B1 /* ParticleWar iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D3912E227BAFC070094C784 /* Build configuration list for PBXNativeTarget "ParticleWar (tvOS)" */;
+			buildConfigurationList = 4D5595A028FC1D5F00D558B1 /* Build configuration list for PBXNativeTarget "ParticleWar iOS" */;
 			buildPhases = (
-				4D3912D127BAFC060094C784 /* Sources */,
-				4D3912D227BAFC060094C784 /* Frameworks */,
-				4D3912D327BAFC060094C784 /* Resources */,
+				4D55956328FC1D5F00D558B1 /* Sources */,
+				4D55956428FC1D5F00D558B1 /* Frameworks */,
+				4D55956528FC1D5F00D558B1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "ParticleWar (tvOS)";
-			productName = ParticleWar;
-			productReference = 4D3912D527BAFC060094C784 /* ParticleWar (tvOS).app */;
+			name = "ParticleWar iOS";
+			productName = "ParticleSurvival iOS";
+			productReference = 4D55956728FC1D5F00D558B1 /* ParticleWar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4D54B7C427BAEB8700DF2091 /* ParticleWar (iOS) */ = {
+		4D55957728FC1D5F00D558B1 /* ParticleWar tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D54B7D627BAEB8700DF2091 /* Build configuration list for PBXNativeTarget "ParticleWar (iOS)" */;
+			buildConfigurationList = 4D5595A328FC1D5F00D558B1 /* Build configuration list for PBXNativeTarget "ParticleWar tvOS" */;
 			buildPhases = (
-				4D54B7C127BAEB8700DF2091 /* Sources */,
-				4D54B7C227BAEB8700DF2091 /* Frameworks */,
-				4D54B7C327BAEB8700DF2091 /* Resources */,
+				4D55957428FC1D5F00D558B1 /* Sources */,
+				4D55957528FC1D5F00D558B1 /* Frameworks */,
+				4D55957628FC1D5F00D558B1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "ParticleWar (iOS)";
-			productName = "ParticleWar (iOS)";
-			productReference = 4D54B7C527BAEB8700DF2091 /* ParticleWar.app */;
+			name = "ParticleWar tvOS";
+			productName = "ParticleSurvival tvOS";
+			productReference = 4D55957828FC1D5F00D558B1 /* ParticleWar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4D54B7CA27BAEB8700DF2091 /* ParticleWar (macOS) */ = {
+		4D55958728FC1D5F00D558B1 /* ParticleWar macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D54B7D927BAEB8700DF2091 /* Build configuration list for PBXNativeTarget "ParticleWar (macOS)" */;
+			buildConfigurationList = 4D5595A628FC1D5F00D558B1 /* Build configuration list for PBXNativeTarget "ParticleWar macOS" */;
 			buildPhases = (
-				4D54B7C727BAEB8700DF2091 /* Sources */,
-				4D54B7C827BAEB8700DF2091 /* Frameworks */,
-				4D54B7C927BAEB8700DF2091 /* Resources */,
+				4D55958428FC1D5F00D558B1 /* Sources */,
+				4D55958528FC1D5F00D558B1 /* Frameworks */,
+				4D55958628FC1D5F00D558B1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "ParticleWar (macOS)";
-			productName = "ParticleWar (macOS)";
-			productReference = 4D54B7CB27BAEB8700DF2091 /* ParticleWar.app */;
+			name = "ParticleWar macOS";
+			productName = "ParticleSurvival macOS";
+			productReference = 4D55958828FC1D5F00D558B1 /* ParticleWar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4D54B7B927BAEB8500DF2091 /* Project object */ = {
+		4D55955A28FC1D5B00D558B1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					4D3912D427BAFC060094C784 = {
-						CreatedOnToolsVersion = 13.2.1;
+					4D55956628FC1D5F00D558B1 = {
+						CreatedOnToolsVersion = 14.0;
 					};
-					4D54B7C427BAEB8700DF2091 = {
-						CreatedOnToolsVersion = 13.2.1;
+					4D55957728FC1D5F00D558B1 = {
+						CreatedOnToolsVersion = 14.0;
 					};
-					4D54B7CA27BAEB8700DF2091 = {
-						CreatedOnToolsVersion = 13.2.1;
+					4D55958728FC1D5F00D558B1 = {
+						CreatedOnToolsVersion = 14.0;
 					};
 				};
 			};
-			buildConfigurationList = 4D54B7BC27BAEB8500DF2091 /* Build configuration list for PBXProject "ParticleWar" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 4D55955D28FC1D5B00D558B1 /* Build configuration list for PBXProject "ParticleWar" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 4D54B7B827BAEB8500DF2091;
-			productRefGroup = 4D54B7C627BAEB8700DF2091 /* Products */;
+			mainGroup = 4D55955928FC1D5B00D558B1;
+			productRefGroup = 4D55956828FC1D5F00D558B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4D54B7C427BAEB8700DF2091 /* ParticleWar (iOS) */,
-				4D54B7CA27BAEB8700DF2091 /* ParticleWar (macOS) */,
-				4D3912D427BAFC060094C784 /* ParticleWar (tvOS) */,
+				4D55956628FC1D5F00D558B1 /* ParticleWar iOS */,
+				4D55957728FC1D5F00D558B1 /* ParticleWar tvOS */,
+				4D55958728FC1D5F00D558B1 /* ParticleWar macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4D3912D327BAFC060094C784 /* Resources */ = {
+		4D55956528FC1D5F00D558B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D3912E827BAFC530094C784 /* level2.json in Resources */,
-				4D3912E327BAFC4F0094C784 /* GameScene.sks in Resources */,
-				4D3912E527BAFC4F0094C784 /* Actions.sks in Resources */,
-				4D3912E727BAFC4F0094C784 /* Assets.xcassets in Resources */,
-				4DFF6E1D27BD60EC00EA3C54 /* level.json in Resources */,
-				4D3912DF27BAFC070094C784 /* Preview Assets.xcassets in Resources */,
+				4D55959528FC1D5F00D558B1 /* GameScene.sks in Resources */,
+				4D5595C428FC22A300D558B1 /* level2.json in Resources */,
+				4D55959228FC1D5F00D558B1 /* Actions.sks in Resources */,
+				4D5595C128FC22A300D558B1 /* level.json in Resources */,
+				4D55959B28FC1D5F00D558B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D54B7C327BAEB8700DF2091 /* Resources */ = {
+		4D55957628FC1D5F00D558B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DFF6E1F27BD60ED00EA3C54 /* level.json in Resources */,
-				4D54B7E927BAECE700DF2091 /* GameScene.sks in Resources */,
-				4D54B7EB27BAECE700DF2091 /* Actions.sks in Resources */,
-				4D54B7F527BAED3400DF2091 /* level2.json in Resources */,
-				4D54B7E527BAECB800DF2091 /* Assets.xcassets in Resources */,
+				4D55959628FC1D5F00D558B1 /* GameScene.sks in Resources */,
+				4D5595C528FC22A300D558B1 /* level2.json in Resources */,
+				4D55959328FC1D5F00D558B1 /* Actions.sks in Resources */,
+				4D5595C228FC22A300D558B1 /* level.json in Resources */,
+				4D55959C28FC1D5F00D558B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D54B7C927BAEB8700DF2091 /* Resources */ = {
+		4D55958628FC1D5F00D558B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DFF6E1E27BD60EC00EA3C54 /* level.json in Resources */,
-				4D54B7EA27BAECE700DF2091 /* GameScene.sks in Resources */,
-				4D54B7EC27BAECE700DF2091 /* Actions.sks in Resources */,
-				4D54B7F627BAED3400DF2091 /* level2.json in Resources */,
-				4D54B7E627BAECB800DF2091 /* Assets.xcassets in Resources */,
+				4D55959728FC1D5F00D558B1 /* GameScene.sks in Resources */,
+				4D5595C628FC22A300D558B1 /* level2.json in Resources */,
+				4D55959D28FC1D5F00D558B1 /* Assets.xcassets in Resources */,
+				4D5595C328FC22A300D558B1 /* level.json in Resources */,
+				4D55959428FC1D5F00D558B1 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4D3912D127BAFC060094C784 /* Sources */ = {
+		4D55956328FC1D5F00D558B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D3912EC27BAFC590094C784 /* Level.swift in Sources */,
-				4D3912EE27BAFC590094C784 /* Bot.swift in Sources */,
-				4D3912F427BAFC620094C784 /* Territory.swift in Sources */,
-				4D3912E627BAFC4F0094C784 /* ParticleWarApp.swift in Sources */,
-				4D3912ED27BAFC590094C784 /* Team.swift in Sources */,
-				4D3912E927BAFC560094C784 /* RangeIndicator.swift in Sources */,
-				4D3912F727BAFD000094C784 /* UIColor.swift in Sources */,
-				4D3912E427BAFC4F0094C784 /* GameScene.swift in Sources */,
-				4D3912EA27BAFC590094C784 /* Game.swift in Sources */,
-				4D3912F227BAFC5D0094C784 /* SKNode.swift in Sources */,
-				4D3912EB27BAFC590094C784 /* Highway.swift in Sources */,
-				4D3912F327BAFC620094C784 /* Army.swift in Sources */,
-				4D3912F627BAFC620094C784 /* HomeTerritory.swift in Sources */,
-				4D3912F527BAFC620094C784 /* Entity.swift in Sources */,
-				4D3912F127BAFC5D0094C784 /* CodingUserInfoKey.swift in Sources */,
-				4D3912F027BAFC5D0094C784 /* CGPoint.swift in Sources */,
-				4D3912EF27BAFC590094C784 /* Client.swift in Sources */,
+				4D55959828FC1D5F00D558B1 /* GameScene.swift in Sources */,
+				4D55962128FC2A1F00D558B1 /* HomeTerritory.swift in Sources */,
+				4D5595B128FC213500D558B1 /* CGPoint.swift in Sources */,
+				4D55962028FC2A1F00D558B1 /* Team.swift in Sources */,
+				4D55961728FC29C400D558B1 /* GameScene>LoadLevel.swift in Sources */,
+				4D55961B28FC2A1F00D558B1 /* Level.swift in Sources */,
+				4D55961C28FC2A1F00D558B1 /* Army.swift in Sources */,
+				4D55961328FC243E00D558B1 /* GameScene>Interactions.swift in Sources */,
+				4D5595AA28FC1F5B00D558B1 /* ParticleWarApp.swift in Sources */,
+				4D1B348728FC58FA00BD94B6 /* Highway.swift in Sources */,
+				4D5595B728FC213500D558B1 /* CodingUserInfoKey.swift in Sources */,
+				4D55961A28FC2A1F00D558B1 /* Client.swift in Sources */,
+				4D55961E28FC2A1F00D558B1 /* Bot.swift in Sources */,
+				4D55963D28FC2C7400D558B1 /* RangeIndicator.swift in Sources */,
+				4D55964228FC2CFF00D558B1 /* UIColor.swift in Sources */,
+				4D55964A28FC303300D558B1 /* Game.swift in Sources */,
+				4D55961F28FC2A1F00D558B1 /* Entity.swift in Sources */,
+				4D55961D28FC2A1F00D558B1 /* Territory.swift in Sources */,
+				4D5595B428FC213500D558B1 /* SKNode.swift in Sources */,
+				4D55963328FC2B4700D558B1 /* GameScene>Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D54B7C127BAEB8700DF2091 /* Sources */ = {
+		4D55957428FC1D5F00D558B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D54B7CE27BAEB8700DF2091 /* ParticleWarApp.swift in Sources */,
-				4D54B80A27BAED5100DF2091 /* Game.swift in Sources */,
-				4D54B81827BAEDE100DF2091 /* HomeTerritory.swift in Sources */,
-				4D54B81F27BAEEAF00DF2091 /* CodingUserInfoKey.swift in Sources */,
-				4D54B80027BAED5100DF2091 /* Highway.swift in Sources */,
-				4D54B80627BAED5100DF2091 /* Team.swift in Sources */,
-				4D54B81027BAEDD300DF2091 /* Army.swift in Sources */,
-				4D54B7F827BAED3C00DF2091 /* RangeIndicator.swift in Sources */,
-				4D54B82327BAEEAF00DF2091 /* SKNode.swift in Sources */,
-				4D54B80427BAED5100DF2091 /* Bot.swift in Sources */,
-				4D54B81227BAEDD300DF2091 /* Entity.swift in Sources */,
-				4D54B80227BAED5100DF2091 /* Client.swift in Sources */,
-				4D54B80827BAED5100DF2091 /* Level.swift in Sources */,
-				4D54B82127BAEEAF00DF2091 /* CGPoint.swift in Sources */,
-				4D54B81627BAEDE100DF2091 /* Territory.swift in Sources */,
-				4D54B81B27BAEE8700DF2091 /* GameScene.swift in Sources */,
-				4D54B7F327BAED0E00DF2091 /* UIColor.swift in Sources */,
+				4D55959928FC1D5F00D558B1 /* GameScene.swift in Sources */,
+				4D55962928FC2A1F00D558B1 /* HomeTerritory.swift in Sources */,
+				4D5595B228FC213500D558B1 /* CGPoint.swift in Sources */,
+				4D55962828FC2A1F00D558B1 /* Team.swift in Sources */,
+				4D55961828FC29C400D558B1 /* GameScene>LoadLevel.swift in Sources */,
+				4D55962328FC2A1F00D558B1 /* Level.swift in Sources */,
+				4D55962428FC2A1F00D558B1 /* Army.swift in Sources */,
+				4D55961428FC243E00D558B1 /* GameScene>Interactions.swift in Sources */,
+				4D5595AB28FC1F6800D558B1 /* ParticleWarApp.swift in Sources */,
+				4D1B348828FC58FA00BD94B6 /* Highway.swift in Sources */,
+				4D5595B828FC213500D558B1 /* CodingUserInfoKey.swift in Sources */,
+				4D55962228FC2A1F00D558B1 /* Client.swift in Sources */,
+				4D55962628FC2A1F00D558B1 /* Bot.swift in Sources */,
+				4D55963E28FC2C7400D558B1 /* RangeIndicator.swift in Sources */,
+				4D55964728FC2D2900D558B1 /* UIColor.swift in Sources */,
+				4D55964928FC2FB900D558B1 /* Game.swift in Sources */,
+				4D55962728FC2A1F00D558B1 /* Entity.swift in Sources */,
+				4D55962528FC2A1F00D558B1 /* Territory.swift in Sources */,
+				4D5595B528FC213500D558B1 /* SKNode.swift in Sources */,
+				4D55963428FC2B4700D558B1 /* GameScene>Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D54B7C727BAEB8700DF2091 /* Sources */ = {
+		4D55958428FC1D5F00D558B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D54B7F127BAED0600DF2091 /* NSColor.swift in Sources */,
-				4D54B80B27BAED5100DF2091 /* Game.swift in Sources */,
-				4D54B81927BAEDE100DF2091 /* HomeTerritory.swift in Sources */,
-				4D54B82027BAEEAF00DF2091 /* CodingUserInfoKey.swift in Sources */,
-				4D54B80127BAED5100DF2091 /* Highway.swift in Sources */,
-				4D54B80727BAED5100DF2091 /* Team.swift in Sources */,
-				4D54B81127BAEDD300DF2091 /* Army.swift in Sources */,
-				4D54B7F927BAED3C00DF2091 /* RangeIndicator.swift in Sources */,
-				4D54B82427BAEEAF00DF2091 /* SKNode.swift in Sources */,
-				4D54B80527BAED5100DF2091 /* Bot.swift in Sources */,
-				4D54B81327BAEDD300DF2091 /* Entity.swift in Sources */,
-				4D54B80327BAED5100DF2091 /* Client.swift in Sources */,
-				4D54B80927BAED5100DF2091 /* Level.swift in Sources */,
-				4D54B82227BAEEAF00DF2091 /* CGPoint.swift in Sources */,
-				4D54B81727BAEDE100DF2091 /* Territory.swift in Sources */,
-				4D54B81A27BAEE8700DF2091 /* GameScene.swift in Sources */,
-				4D54B7CF27BAEB8700DF2091 /* ParticleWarApp.swift in Sources */,
+				4D55959A28FC1D5F00D558B1 /* GameScene.swift in Sources */,
+				4D55963128FC2A2000D558B1 /* HomeTerritory.swift in Sources */,
+				4D5595B328FC213500D558B1 /* CGPoint.swift in Sources */,
+				4D55963028FC2A2000D558B1 /* Team.swift in Sources */,
+				4D55961928FC29C400D558B1 /* GameScene>LoadLevel.swift in Sources */,
+				4D55962B28FC2A2000D558B1 /* Level.swift in Sources */,
+				4D55962C28FC2A2000D558B1 /* Army.swift in Sources */,
+				4D55961528FC243E00D558B1 /* GameScene>Interactions.swift in Sources */,
+				4D5595AC28FC1F6800D558B1 /* ParticleWarApp.swift in Sources */,
+				4D1B348928FC58FA00BD94B6 /* Highway.swift in Sources */,
+				4D5595B928FC213500D558B1 /* CodingUserInfoKey.swift in Sources */,
+				4D55962A28FC2A2000D558B1 /* Client.swift in Sources */,
+				4D55963928FC2BB800D558B1 /* NSColor.swift in Sources */,
+				4D55962E28FC2A2000D558B1 /* Bot.swift in Sources */,
+				4D55963F28FC2C7400D558B1 /* RangeIndicator.swift in Sources */,
+				4D55964B28FC303400D558B1 /* Game.swift in Sources */,
+				4D55962F28FC2A2000D558B1 /* Entity.swift in Sources */,
+				4D55962D28FC2A2000D558B1 /* Territory.swift in Sources */,
+				4D5595B628FC213500D558B1 /* SKNode.swift in Sources */,
+				4D55963528FC2B4700D558B1 /* GameScene>Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4D3912E027BAFC070094C784 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ParticleWar tvOS/Preview\"";
-				DEVELOPMENT_TEAM = M4VYPGVP3V;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.lawrencebensaid.ParticleWar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 15.2;
-			};
-			name = Debug;
-		};
-		4D3912E127BAFC070094C784 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ParticleWar tvOS/Preview\"";
-				DEVELOPMENT_TEAM = M4VYPGVP3V;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.lawrencebensaid.ParticleWar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 15.2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4D54B7D427BAEB8700DF2091 /* Debug */ = {
+		4D55959E28FC1D5F00D558B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -615,14 +569,13 @@
 			};
 			name = Debug;
 		};
-		4D54B7D527BAEB8700DF2091 /* Release */ = {
+		4D55959F28FC1D5F00D558B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -667,7 +620,7 @@
 			};
 			name = Release;
 		};
-		4D54B7D727BAEB8700DF2091 /* Debug */ = {
+		4D5595A128FC1D5F00D558B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -675,15 +628,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M4VYPGVP3V;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.adventure-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -698,7 +651,7 @@
 			};
 			name = Debug;
 		};
-		4D54B7D827BAEB8700DF2091 /* Release */ = {
+		4D5595A228FC1D5F00D558B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -706,15 +659,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M4VYPGVP3V;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.adventure-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -730,27 +683,81 @@
 			};
 			name = Release;
 		};
-		4D54B7DA27BAEB8700DF2091 /* Debug */ = {
+		4D5595A428FC1D5F00D558B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M4VYPGVP3V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lawrencebensaid.ParticleWar;
+				PRODUCT_NAME = ParticleWar;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.0;
+			};
+			name = Debug;
+		};
+		4D5595A528FC1D5F00D558B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M4VYPGVP3V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.lawrencebensaid.ParticleWar;
+				PRODUCT_NAME = ParticleWar;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D5595A728FC1D5F00D558B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M4VYPGVP3V;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.strategy-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.lawrencebensaid.ParticleWar;
 				PRODUCT_NAME = ParticleWar;
@@ -760,27 +767,26 @@
 			};
 			name = Debug;
 		};
-		4D54B7DB27BAEB8700DF2091 /* Release */ = {
+		4D5595A828FC1D5F00D558B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M4VYPGVP3V;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.strategy-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.lawrencebensaid.ParticleWar;
 				PRODUCT_NAME = ParticleWar;
@@ -793,43 +799,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4D3912E227BAFC070094C784 /* Build configuration list for PBXNativeTarget "ParticleWar (tvOS)" */ = {
+		4D55955D28FC1D5B00D558B1 /* Build configuration list for PBXProject "ParticleWar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D3912E027BAFC070094C784 /* Debug */,
-				4D3912E127BAFC070094C784 /* Release */,
+				4D55959E28FC1D5F00D558B1 /* Debug */,
+				4D55959F28FC1D5F00D558B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D54B7BC27BAEB8500DF2091 /* Build configuration list for PBXProject "ParticleWar" */ = {
+		4D5595A028FC1D5F00D558B1 /* Build configuration list for PBXNativeTarget "ParticleWar iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D54B7D427BAEB8700DF2091 /* Debug */,
-				4D54B7D527BAEB8700DF2091 /* Release */,
+				4D5595A128FC1D5F00D558B1 /* Debug */,
+				4D5595A228FC1D5F00D558B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D54B7D627BAEB8700DF2091 /* Build configuration list for PBXNativeTarget "ParticleWar (iOS)" */ = {
+		4D5595A328FC1D5F00D558B1 /* Build configuration list for PBXNativeTarget "ParticleWar tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D54B7D727BAEB8700DF2091 /* Debug */,
-				4D54B7D827BAEB8700DF2091 /* Release */,
+				4D5595A428FC1D5F00D558B1 /* Debug */,
+				4D5595A528FC1D5F00D558B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D54B7D927BAEB8700DF2091 /* Build configuration list for PBXNativeTarget "ParticleWar (macOS)" */ = {
+		4D5595A628FC1D5F00D558B1 /* Build configuration list for PBXNativeTarget "ParticleWar macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D54B7DA27BAEB8700DF2091 /* Debug */,
-				4D54B7DB27BAEB8700DF2091 /* Release */,
+				4D5595A728FC1D5F00D558B1 /* Debug */,
+				4D5595A828FC1D5F00D558B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4D54B7B927BAEB8500DF2091 /* Project object */;
+	rootObject = 4D55955A28FC1D5B00D558B1 /* Project object */;
 }
