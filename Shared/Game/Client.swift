@@ -77,6 +77,7 @@ class Client: Hashable {
         if let selected = selected {
             guard selected.distance(to: territory) <= territory.range else { unselect(); return }
             if selected.team == team && selected != territory {
+                unselect()
                 selected.launchAttack(on: territory)
             } else {
                 unselect()

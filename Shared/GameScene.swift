@@ -23,7 +23,7 @@ class GameScene: SKScene, ObservableObject {
     internal var rangeIndicators: [Client: RangeIndicator] = [:]
     
     // Engine
-    internal var lastUpdateTime = 0.0
+    private var lastUpdateTime = 0.0
     
     // Game
     public var game: Game!
@@ -36,6 +36,7 @@ class GameScene: SKScene, ObservableObject {
         guard let scene = SKScene(fileNamed: "GameScene") as? GameScene else { print("Failed to load GameScene.sks"); abort() }
         scene.scaleMode = .aspectFill
         scene.game = game
+        scene.speed = 2
         return scene
     }
     
@@ -56,8 +57,11 @@ class GameScene: SKScene, ObservableObject {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        game.fps = 1 / (currentTime - lastUpdateTime)
+        if lastUpdateTime == 0 { lastUpdateTime = currentTime } // Initial set time
+        let fps = 1 / (currentTime - lastUpdateTime)
         lastUpdateTime = currentTime
+        game.sim = fps / 60 * speed
+        game.time += 1 / 60 * speed
         
         for bot in self.level?.bots ?? [] {
             bot.update()
@@ -82,6 +86,13 @@ class GameScene: SKScene, ObservableObject {
                 army.position.x += vx
                 army.position.y += vy
             }
+        }
+        
+        if level?.player?.ownTerritories.count == level?.player?.territories.count {
+            game.end(reason: .won)
+        }
+        if level?.player?.ownTerritories.count == 0 {
+            game.end(reason: .lost)
         }
         
     }
