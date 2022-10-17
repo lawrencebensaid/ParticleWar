@@ -82,6 +82,19 @@
 		4D55964928FC2FB900D558B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55964828FC2FB900D558B1 /* Game.swift */; };
 		4D55964A28FC303300D558B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55964828FC2FB900D558B1 /* Game.swift */; };
 		4D55964B28FC303400D558B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55964828FC2FB900D558B1 /* Game.swift */; };
+		4D6BB98528FD85C100DE09CA /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BB98428FD85C100DE09CA /* Double.swift */; };
+		4D6BB98628FD85C100DE09CA /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BB98428FD85C100DE09CA /* Double.swift */; };
+		4D6BB98728FD85C100DE09CA /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BB98428FD85C100DE09CA /* Double.swift */; };
+		4D81D6F128FC6173007CEA11 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D81D6F028FC6173007CEA11 /* Settings.bundle */; };
+		4D81D6F328FC6C55007CEA11 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81D6F228FC6C55007CEA11 /* MenuView.swift */; };
+		4D81D6F728FC6EA6007CEA11 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81D6F228FC6C55007CEA11 /* MenuView.swift */; };
+		4D81D6F828FC6EA6007CEA11 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81D6F228FC6C55007CEA11 /* MenuView.swift */; };
+		4D81D6FA28FD5946007CEA11 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81D6F928FD5946007CEA11 /* GameOverView.swift */; };
+		4D81D6FB28FD5DD9007CEA11 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81D6F928FD5946007CEA11 /* GameOverView.swift */; };
+		4D81D6FC28FD5DDA007CEA11 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81D6F928FD5946007CEA11 /* GameOverView.swift */; };
+		4D81D6FE28FD5F76007CEA11 /* PausedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81D6FD28FD5F76007CEA11 /* PausedView.swift */; };
+		4D81D6FF28FD5FFD007CEA11 /* PausedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81D6FD28FD5F76007CEA11 /* PausedView.swift */; };
+		4D81D70028FD5FFD007CEA11 /* PausedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81D6FD28FD5F76007CEA11 /* PausedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +129,11 @@
 		4D55964128FC2CFF00D558B1 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4D55964628FC2D2900D558B1 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4D55964828FC2FB900D558B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4D6BB98428FD85C100DE09CA /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		4D81D6F028FC6173007CEA11 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		4D81D6F228FC6C55007CEA11 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		4D81D6F928FD5946007CEA11 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		4D81D6FD28FD5F76007CEA11 /* PausedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				4D5595AD28FC211B00D558B1 /* Extensions */,
+				4D81D6F428FC6C58007CEA11 /* Views */,
 				4D5595BD28FC227400D558B1 /* Game */,
 				4D5595BE28FC228500D558B1 /* Level */,
 				4D55963B28FC2C6900D558B1 /* GUI */,
@@ -188,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				4D55964028FC2CEC00D558B1 /* Extensions */,
+				4D81D6F028FC6173007CEA11 /* Settings.bundle */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -215,6 +235,7 @@
 				4D5595AE28FC213400D558B1 /* CGPoint.swift */,
 				4D5595B028FC213500D558B1 /* CodingUserInfoKey.swift */,
 				4D5595AF28FC213400D558B1 /* SKNode.swift */,
+				4D6BB98428FD85C100DE09CA /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,6 +311,16 @@
 				4D55964628FC2D2900D558B1 /* UIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D81D6F428FC6C58007CEA11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D81D6F228FC6C55007CEA11 /* MenuView.swift */,
+				4D81D6F928FD5946007CEA11 /* GameOverView.swift */,
+				4D81D6FD28FD5F76007CEA11 /* PausedView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +427,7 @@
 				4D5595C428FC22A300D558B1 /* level2.json in Resources */,
 				4D55959228FC1D5F00D558B1 /* Actions.sks in Resources */,
 				4D5595C128FC22A300D558B1 /* level.json in Resources */,
+				4D81D6F128FC6173007CEA11 /* Settings.bundle in Resources */,
 				4D55959B28FC1D5F00D558B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,10 +470,14 @@
 				4D55961728FC29C400D558B1 /* GameScene>LoadLevel.swift in Sources */,
 				4D55961B28FC2A1F00D558B1 /* Level.swift in Sources */,
 				4D55961C28FC2A1F00D558B1 /* Army.swift in Sources */,
+				4D81D6F328FC6C55007CEA11 /* MenuView.swift in Sources */,
 				4D55961328FC243E00D558B1 /* GameScene>Interactions.swift in Sources */,
+				4D81D6FE28FD5F76007CEA11 /* PausedView.swift in Sources */,
+				4D6BB98528FD85C100DE09CA /* Double.swift in Sources */,
 				4D5595AA28FC1F5B00D558B1 /* ParticleWarApp.swift in Sources */,
 				4D1B348728FC58FA00BD94B6 /* Highway.swift in Sources */,
 				4D5595B728FC213500D558B1 /* CodingUserInfoKey.swift in Sources */,
+				4D81D6FA28FD5946007CEA11 /* GameOverView.swift in Sources */,
 				4D55961A28FC2A1F00D558B1 /* Client.swift in Sources */,
 				4D55961E28FC2A1F00D558B1 /* Bot.swift in Sources */,
 				4D55963D28FC2C7400D558B1 /* RangeIndicator.swift in Sources */,
@@ -465,10 +501,14 @@
 				4D55961828FC29C400D558B1 /* GameScene>LoadLevel.swift in Sources */,
 				4D55962328FC2A1F00D558B1 /* Level.swift in Sources */,
 				4D55962428FC2A1F00D558B1 /* Army.swift in Sources */,
+				4D81D6F728FC6EA6007CEA11 /* MenuView.swift in Sources */,
 				4D55961428FC243E00D558B1 /* GameScene>Interactions.swift in Sources */,
+				4D81D6FF28FD5FFD007CEA11 /* PausedView.swift in Sources */,
+				4D6BB98628FD85C100DE09CA /* Double.swift in Sources */,
 				4D5595AB28FC1F6800D558B1 /* ParticleWarApp.swift in Sources */,
 				4D1B348828FC58FA00BD94B6 /* Highway.swift in Sources */,
 				4D5595B828FC213500D558B1 /* CodingUserInfoKey.swift in Sources */,
+				4D81D6FB28FD5DD9007CEA11 /* GameOverView.swift in Sources */,
 				4D55962228FC2A1F00D558B1 /* Client.swift in Sources */,
 				4D55962628FC2A1F00D558B1 /* Bot.swift in Sources */,
 				4D55963E28FC2C7400D558B1 /* RangeIndicator.swift in Sources */,
@@ -492,10 +532,14 @@
 				4D55961928FC29C400D558B1 /* GameScene>LoadLevel.swift in Sources */,
 				4D55962B28FC2A2000D558B1 /* Level.swift in Sources */,
 				4D55962C28FC2A2000D558B1 /* Army.swift in Sources */,
+				4D81D6F828FC6EA6007CEA11 /* MenuView.swift in Sources */,
 				4D55961528FC243E00D558B1 /* GameScene>Interactions.swift in Sources */,
+				4D81D70028FD5FFD007CEA11 /* PausedView.swift in Sources */,
+				4D6BB98728FD85C100DE09CA /* Double.swift in Sources */,
 				4D5595AC28FC1F6800D558B1 /* ParticleWarApp.swift in Sources */,
 				4D1B348928FC58FA00BD94B6 /* Highway.swift in Sources */,
 				4D5595B928FC213500D558B1 /* CodingUserInfoKey.swift in Sources */,
+				4D81D6FC28FD5DDA007CEA11 /* GameOverView.swift in Sources */,
 				4D55962A28FC2A2000D558B1 /* Client.swift in Sources */,
 				4D55963928FC2BB800D558B1 /* NSColor.swift in Sources */,
 				4D55962E28FC2A2000D558B1 /* Bot.swift in Sources */,
