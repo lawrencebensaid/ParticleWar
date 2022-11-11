@@ -70,6 +70,15 @@ extension GameScene {
 #if os(macOS)
 extension GameScene {
     
+    override func keyDown(with event: NSEvent) {
+        if event.keyCode == 35 { // P
+            game.isPaused ? game.unpause() : game.pause()
+        }
+        if event.keyCode == 7 { // X
+            game.scene?.speed = game.scene?.speed == 1 ? 2 : 1
+        }
+    }
+    
     override func mouseDown(with event: NSEvent) {
         guard let camera = self.camera else { print("NO CAMEREA"); return }
         let point = event.location(in: self)
