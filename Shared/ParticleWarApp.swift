@@ -61,11 +61,12 @@ struct ParticleWarApp: App {
             SpriteView(scene: scene)
                 .environmentObject(game)
                 .edgesIgnoringSafeArea(.all)
+            if !hideOverlay {
+                overlayView
+            }
             if game.isPaused {
                 PausedView()
                     .environmentObject(game)
-            } else if !hideOverlay {
-                overlayView
             }
         }
         .foregroundColor(.white)
@@ -91,8 +92,7 @@ struct ParticleWarApp: App {
                 .padding()
                 .help("Leaderboard")
                 Spacer()
-                Text("\(Int(game.time))")
-                    .font(.system(size: 24, weight: .bold))
+                clock
                 Spacer()
                 VStack(alignment: .leading, spacing: 4) {
                     let client = game.scene?.level?.player
@@ -110,4 +110,16 @@ struct ParticleWarApp: App {
                 .foregroundColor(.yellow)
         }
     }
+    
+    private var clock: some View {
+        HStack(spacing: 0) {
+            if game.time < 60 {
+                Text("\(Int(game.time))")
+            } else {
+                Text(String(format: "%i:%02i", Int(game.time) / 60, Int(game.time) % 60))
+            }
+        }
+        .font(.system(size: 24, weight: .bold))
+    }
+    
 }
