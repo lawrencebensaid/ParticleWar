@@ -33,6 +33,7 @@ class Game: ObservableObject {
         isPaused = true
         scene = nil
         state = .mainMenu
+        time = 0
     }
     
     func pause() {
